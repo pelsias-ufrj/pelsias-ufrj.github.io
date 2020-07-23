@@ -1,0 +1,27 @@
+.rede{
+    transition: all 0.4s ease-out;
+    border-radius: 50%;
+    
+    }
+.rede:hover{
+cursor: pointer;
+transform: translateY(-3px);
+box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
+}
+
+.items-div {
+    position: absolute;
+    right: 20px;
+}
+
+.navbar-item{
+    padding-left: 30px;
+}
+
+@media only screen and (max-width: 980px) {
+    .items-div {
+        position: unset !important;
+        right: unset !important;
+    }
+  }
+  
