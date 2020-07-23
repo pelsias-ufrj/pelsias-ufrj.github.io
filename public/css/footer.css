@@ -1,0 +1,31 @@
+.footer{
+    background: #ececec;
+    height: 150px ;
+    margin-top: 80px;
+    position: relative;
+}
+
+.footer-content{
+    background: rgb(92, 120, 135);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-share{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.footer-icon{
+    height: 35px;
+    padding-right: 25px;
+}
