@@ -1,0 +1,12 @@
+.contato-share{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.contato-icon{
+    height: 35px;
+    padding-right: 25px;
+}
