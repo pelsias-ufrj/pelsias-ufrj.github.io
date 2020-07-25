@@ -1,12 +1,11 @@
 .footer{
-    background: #ececec;
+    background:  rgb(92, 120, 135);
     height: 150px ;
     margin-top: 80px;
     position: relative;
 }
 
 .footer-content{
-    background: rgb(92, 120, 135);
     color: white;
     font-weight: 800;
     font-size: 14px;
