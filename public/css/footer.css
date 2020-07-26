@@ -1,5 +1,5 @@
 .footer{
-    background:  rgb(92, 120, 135);
+    background: rgb(92, 120, 135);
     height: 150px ;
     margin-top: 80px;
     position: relative;
@@ -27,4 +27,14 @@
 .footer-icon{
     height: 35px;
     padding-right: 25px;
+}
+.footer-copyright{
+    background: rgb(92, 120, 135);
+    color: black;
+    font-weight: 800;
+    font-size: 14px;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
 }
