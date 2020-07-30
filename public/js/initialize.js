@@ -1,5 +1,5 @@
-// header 
-$(document).ready(function() {
-    $("#header").load("/header.html");
-    $("#footer").load("footer.html"); 
+// header
+$(document).ready(() => {
+  $('#header').load('/header.html');
+  $('#footer').load('footer.html');
 });
