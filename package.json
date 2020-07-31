@@ -2,9 +2,9 @@
   "name": "pelsias-ufrj.github.io",
   "version": "1.0.0",
   "description": "Página do Capítulo Estudantil PELS/IAS da UFRJ",
-  "main": "/server/server.js",
+  "main": "servers.js",
   "scripts": {
-    "start": "nodemon /server/servers.js"
+    "start": "nodemon servers.js"
   },
   "repository": {
     "type": "git",
