@@ -9,7 +9,11 @@ app.use(bodyParser.json());
 
 app.post('/join-us', (req, res) => {
   console.log(req.body);
-  res.send('cadastrado'); 
+  res.send('cadastrado');
 });
 app.get('/teste', (req, res) => res.send('ok'));
 app.listen(8080, () => console.log('Executando...'));
+
+module.exports = {
+  app,
+};
