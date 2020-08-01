@@ -4,7 +4,7 @@
   "description": "Página do Capítulo Estudantil PELS/IAS da UFRJ",
   "main": "servers.js",
   "scripts": {
-    "start": "nodemon servers.js"
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
