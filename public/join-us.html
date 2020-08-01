@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="/css/index.css" rel="stylesheet" type="text/css"/>
+    
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+        <title>Capítulo PELS/IAS UFRJ</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="/js/initialize.js" type="module"></script>  
+      </head>
+<body>
+    <div id="header"></div>
+    
+    <form method="POST">
+        <input type="hidden" name="id" value="3">
+        <input type="text" name="nome">
+        <input type="password" name="senha">
+        <textarea name="bio" cols="30" rows="10"></textarea>
+        <div>
+            <input type="radio" name="tipo" id="Admin">Admin
+            <input type="radio" name="tipo" id="Regular">Regular
+        </div>
+    
+        <div>
+            <input type="checkbox" name="ativo" id="">Ativo
+        </div>
+    
+        <select name="estado">
+            <option value="">Selecione</option>
+            <option value="ac">Acre</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+        </select>
+    
+        <select name="interesses" multiple size="6">
+            <option value="js">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+            <option value="go">GO</option>
+            <option value="c">C</option>
+    
+        </select>
+    
+        <button formaction="http://localhost:8080/join-us">Incluir</button>
+        <button formaction="http://localhost:8080/join-us">Alterar</button>
+    </form>
+
+    <span id='ola'></span>
+
+    <div id="footer"></div>
+</body>
+</html>
