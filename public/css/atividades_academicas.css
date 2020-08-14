@@ -1,3 +1,8 @@
+
 body{
     font-family: 'Montserrat'!important;
 }
+.carousel {
+    width: 1000px;
+    margin: 0 auto;
+  }
