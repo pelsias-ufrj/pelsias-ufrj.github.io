@@ -1,16 +1,66 @@
 
 body{
     font-family: 'Montserrat'!important;
-    background-color: #4099E6;
+    height:100vh !important;
 }
-.carousel {
-    width: 500px;
-    margin: 0 auto;
-  }
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    border: 3px solid green;
-  }
+
+
+.text,
+.title{
+    text-align: center;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 900;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.text{
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%; 
+    font-weight: 600;
+}
+
+.blue{
+    background: rgb(92, 120, 135);
+    color: white;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.carousel{
+  background: #2f4357;
+  
+ 
+}
+.carousel-item{
+  text-align: center;
+  min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+  margin: auto;
+}
+
+.carousel-inner img{
+  margin: auto;
+  width:100%;
+  max-height: 600px !important;
+}
+
+
+.carousel-control-prev-icon {
+  border: black;
+  
+}
+.carousel-control-next-icon {
+  border: black;
+}
+.title-eventos{
+  font-size: 32px;
+  font-weight: 900;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+}
