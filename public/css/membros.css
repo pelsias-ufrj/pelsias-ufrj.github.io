@@ -20,9 +20,8 @@ body{
 }
 
 .groups-container a {
-    color: #000;
-    background: #00A;
-    padding: 24px;
+    color: #ffffff;
+    padding: 100px;
     border-radius: 8px;
     border: 0;
     height: 400px;
@@ -31,8 +30,7 @@ body{
 }
 
 .groups-container a:hover {
-    color: #000;
-    background: #00F;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -42,14 +40,28 @@ body{
 }
 
 .groups-container a div h2 {
-    color: #FFF;
+    color: #ffffff;
     align-self: center;
+    
 }
 
 .groups-container a div p {
     display: none;
+    
 }
 
+.groups-container a:hover div h2 {
+    display: block;
+    transition-duration: 500ms;
+    transform: translateY(-50px);
+    
+    
+}
 .groups-container a:hover div p {
     display: block;
+    transition-duration: 500ms;
+    transform: translateY(-50px);
+    
+    
+    
 }
