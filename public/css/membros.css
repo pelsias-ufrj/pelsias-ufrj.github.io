@@ -21,7 +21,10 @@ body{
 
 .groups-container a {
     color: #ffffff;
-    padding: 100px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
     border-radius: 8px;
     border: 0;
     height: 400px;
@@ -42,6 +45,7 @@ body{
 .groups-container a div h2 {
     color: #ffffff;
     align-self: center;
+    text-align: center;
     
 }
 
