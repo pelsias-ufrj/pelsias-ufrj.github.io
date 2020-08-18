@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-        <link href="/css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/join.css" rel="stylesheet" type="text/css"/>
     
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
         <title>Capítulo PELS/IAS UFRJ</title>
@@ -17,6 +17,40 @@
 <body>
     <div id="header"></div>
     
+    <div class="form-style-10">
+        <div class="title-wrapper">
+            <span class="title">Dicas de projetos</span> 
+            <span class="subtitle">
+                Se você tem uma sugestão interessante de evento ou projeto para o nosso Capítulo fique a vontade para descrever sua sugestão aqui,
+                 gostaríamos de saber apenas algumas informações antes. Vamos lá!
+            </span>
+        </div>
+        <form method="POST">
+            <div class="section"><span>1</span>Endereço de e-mail</div>
+            <div class="inner-wrap">
+                <input type="email" name="email" placeholder="Seu e-mail"/>
+            </div>
+        
+            <div class="section"><span>2</span>Nome</div>
+            <div class="inner-wrap">
+                <input type="text" name="name" placeholder="Sua resposta"/>
+            </div>
+        
+            <div class="section"><span>3</span>Curso</div>
+                <div class="inner-wrap">
+                <label>Password <input type="password" name="field5" /></label>
+                <label>Confirm Password <input type="password" name="field6" /></label>
+            </div>
+            <div class="button-section">
+             <input type="submit" name="Sign Up" />
+             <span class="privacy-policy">
+             <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+             </span>
+            </div>
+            <button formaction="http://localhost:8080/join-us">Incluir</button>
+        </form>
+        </div>
+
     <form method="POST">
         <input type="hidden" name="id" value="3">
         <input type="text" name="nome">
