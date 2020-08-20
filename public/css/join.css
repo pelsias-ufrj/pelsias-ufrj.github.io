@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat'!important;
 }
 
-
+/* Form */
 .form-style-10{
     position: relative;
     top: 100px;
@@ -130,4 +130,44 @@ body{
 	color: #4D4D4D;
 	margin-top: 10px;
 	text-align: right;
+}
+
+/* Check Box */
+
+
+
+input[type="checkbox"] {
+	display: none;
+}
+
+label {
+	font-size: 24px;
+	color: #bfbfbf;
+	display: inline-block;
+	padding: 0 0 0 1em;
+	cursor: pointer;
+}
+label:before {
+	content: '';
+	display: inline-block;
+	background: #55D8C6;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	border-radius: 80%;
+	box-shadow: 0px 1px 0 0 rgba(0, 0, 0, .2);
+	box-sizing: border-box;
+	border: 10px solid #fff;
+	transition: border .3s ease;
+}
+
+input[type="checkbox"]:checked + label:before {
+	border-color: #fff;
+	border-width: 3px;
+}
+input[type="checkbox"] + label {
+	transition: color .7s ease;
+}
+input[type="checkbox"]:checked + label {
+	color: #5D5D5D;
 }
