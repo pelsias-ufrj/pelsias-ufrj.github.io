@@ -1,7 +1,6 @@
 .footer{
     background: rgb(41, 41, 41);
     height: 350px ;
-    margin-top: 80px;
     position: relative;
     display: flex;
     flex-direction: column;
