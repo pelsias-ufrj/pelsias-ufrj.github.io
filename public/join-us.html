@@ -12,7 +12,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="/js/initialize.js" type="module"></script>  
+        <script src="/js/initialize.js" type="module"></script>
+        <script src="/js/form.js" type="module"></script>  
       </head>
 <body>
     <div id="header"></div>
@@ -26,14 +27,26 @@
             </span>
         </div>
         <form method="POST">
-            <div class="section"><span>1</span>Endereço de e-mail</div>
+            <div class="section">
+                <span>1</span>
+                <div class="line">
+                    Endereço de e-mail
+                    <div id="invalid-email" class="missing">*Campo Obrigatório</div>
+                </div>
+            </div>
             <div class="inner-wrap">
-                <input type="email" name="email" placeholder="Seu e-mail"/>
+                <input id="email-input" type="email" name="email" placeholder="Seu e-mail"/>
             </div>
         
-            <div class="section"><span>2</span>Nome</div>
+            <div class="section">
+                <span>2</span>
+                <div class="line">
+                    Nome
+                    <div id="invalid-name" class="missing">*Campo Obrigatório</div>
+                </div>
+            </div>
             <div class="inner-wrap">
-                <input type="text" name="name" placeholder="Sua resposta"/>
+                <input id="name-input" type="text" name="name" placeholder="Sua resposta"/>
             </div>
         
             <div class="section"><span>3</span>Curso</div>
@@ -56,9 +69,15 @@
                     </div>
             </div>
 
-            <div class="section"><span>4</span>Período</div>
+            <div class="section">
+                <span>4</span>
+                <div class="line">
+                    Período
+                    <div id="invalid-period" class="missing">*Campo Obrigatório</div>
+                </div>
+            </div>
             <div class="inner-wrap">
-                <input type="text" name="periodo" placeholder="Sua resposta"/>
+                <input id="period-input" type="text" name="periodo" placeholder="Sua resposta"/>
             </div>
 
             <div class="section"><span>5</span>Qual a área do Capítulo pela qual você mais se interessa?</div>
@@ -89,17 +108,19 @@
                     </div>
             </div>
 
-            <div class="section"><span>7</span>Nos conte a sua sugestão, pode ser uma sugestão de algum concurso do IEEE também.</div>
+            <div class="section">
+                <span>7</span>
+                Nos conte a sua sugestão, pode ser uma sugestão de algum concurso do IEEE também.
+                <div class="missing" id="invalid-text">*Campo Obrigatório</div>
+            </div>
             <div class="inner-wrap">
-                <input type="text" name="texto_sug" placeholder="Sua resposta"/>
+                <input id="sug-input" type="text" name="texto_sug" placeholder="Sua resposta"/>
             </div>
 
 
             <div class="button-section">
-             <input type="submit" name="Sign Up" />
-             </span>
+                <button id="send-form" class="send-button" formaction="http://localhost:8080/join-us">Enviar</button>
             </div>
-            <button class="" formaction="http://localhost:8080/join-us">Enviar</button>
         </form>
         </div>
 
