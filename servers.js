@@ -7,10 +7,11 @@ app.use(express.static('./public/.'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post('/join-us', (req, res) => {
+app.post('/join-us.html', (req, res) => {
   console.log(req.body);
   res.send('cadastrado');
 });
+
 app.get('/teste', (req, res) => res.send('ok'));
 app.listen(8080, () => console.log('Executando...'));
 

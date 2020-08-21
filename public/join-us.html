@@ -26,7 +26,7 @@
                  gostaríamos de saber apenas algumas informações antes. Vamos lá!
             </span>
         </div>
-        <form method="POST">
+        <form method="POST" id="form">
             <div class="section">
                 <span>1</span>
                 <div class="line">
@@ -114,16 +114,33 @@
                 <div class="missing" id="invalid-text">*Campo Obrigatório</div>
             </div>
             <div class="inner-wrap">
-                <input id="sug-input" type="text" name="texto_sug" placeholder="Sua resposta"/>
+                <input id="text-input" type="text" name="texto_sug" placeholder="Sua resposta"/>
             </div>
 
 
             <div class="button-section">
-                <button id="send-form" class="send-button" formaction="http://localhost:8080/join-us">Enviar</button>
             </div>
         </form>
+        <button id="send-form" class="send-button" formaction="http://localhost:8080/join-us.html">Enviar</button>
         </div>
 
+        <div id="modal" class="modal">
+            <!-- Start Modal content -->
+             <div class="modal-content">
+                 <div class="modal-title">
+                    <p>Formulário Enviado!</p> 
+                 </div>
+                 <div class="modal-text-wrapper">
+                    <div class="text">
+                        <p>A equipe PELS/IAS agradece pelas ideias compatilhadads e pelo seu interesse em participar da nossa equipe!</p>
+                        <p>Assim que possível enviaremos um feedback pelo email fornecido no formulário.</p>
+                    </div> 
+                 </div>
+                 <div class="modal-button-wrapper">
+                    <button class="close-button" id="close-button">Fechar!</button>
+                 </div>
+            </div>
+        </div>
     <div id="footer"></div>
 </body>
 </html>
