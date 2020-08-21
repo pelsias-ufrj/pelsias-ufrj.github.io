@@ -39,68 +39,69 @@
             <div class="section"><span>3</span>Curso</div>
                 <div class="inner-wrap">
                     <div class="checkbox">
-                        <input id="eletrica" type="checkbox" value="eng_eletrica" checked>
-                        <label for="eletrica">Engenharia Elétrica.</label>
+                        <input id="eletrica" type="radio" name="curso" value="eng_eletrica" checked>
+                        <label for="eletrica">Engenharia Elétrica</label>
                     </div>
                     <div class="checkbox">
-                        <input id="eletronica" type="checkbox" value="eng_eletronica">
+                        <input id="eletronica" type="radio" name="curso" value="eng_eletronica">
                         <label for="eletronica">Engenharia Eletrônica</label>
                     </div>
                     <div class="checkbox">
-                        <input id="controle" type="checkbox" value="eng_controle">
+                        <input id="controle" type="radio" name="curso" value="eng_controle">
                         <label for="controle">Engenharia de Controle e Automação</label>
                     </div>
                     <div class="checkbox">
-                        <input id="outro" type="checkbox" value="check">
+                        <input id="outro" type="radio" name="curso" value="check">
                         <label for="outro">Outro</label>
                     </div>
             </div>
+
+            <div class="section"><span>4</span>Período</div>
+            <div class="inner-wrap">
+                <input type="text" name="periodo" placeholder="Sua resposta"/>
+            </div>
+
+            <div class="section"><span>5</span>Qual a área do Capítulo pela qual você mais se interessa?</div>
+                <div class="inner-wrap">
+                    <div class="checkbox">
+                        <input id="elepot" type="radio" name="area" value="elepot">
+                        <label for="elepot">Eletrônica de Potência</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="apli_ind" type="radio" name="area" value="apli_ind">
+                        <label for="apli_ind">Aplicações Industriais</label>
+                    </div>
+            </div>
+
+            <div class="section"><span>6</span>A sua sugestão é para qual coordenação?</div>
+                <div class="inner-wrap">
+                    <div class="checkbox">
+                        <input id="projetos" type="radio" name="sugestao" value="projetos" checked>
+                        <label for="projetos">Projetos(Concursos, equipamentos inovadores)</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="ativ_acad" type="radio" name="sugestao" value="ativ_acad">
+                        <label for="ativ_acad">Atividades Acadêmicas(Palestras, cursos, vídeos)</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="marketing" type="radio" name="sugestao" value="marketing">
+                        <label for="marketing">Marketing(Postagens, melhorias no site)</label>
+                    </div>
+            </div>
+
+            <div class="section"><span>7</span>Nos conte a sua sugestão, pode ser uma sugestão de algum concurso do IEEE também.</div>
+            <div class="inner-wrap">
+                <input type="text" name="texto_sug" placeholder="Sua resposta"/>
+            </div>
+
+
             <div class="button-section">
              <input type="submit" name="Sign Up" />
-             <span class="privacy-policy">
-             <input type="checkbox" name="field7">You agree to our Terms and Policy. 
              </span>
             </div>
-            <button formaction="http://localhost:8080/join-us">Incluir</button>
+            <button class="" formaction="http://localhost:8080/join-us">Enviar</button>
         </form>
         </div>
-
-    <form method="POST">
-        <input type="hidden" name="id" value="3">
-        <input type="text" name="nome">
-        <input type="password" name="senha">
-        <textarea name="bio" cols="30" rows="10"></textarea>
-        <div>
-            <input type="radio" name="tipo" id="Admin">Admin
-            <input type="radio" name="tipo" id="Regular">Regular
-        </div>
-    
-        <div>
-            <input type="checkbox" name="ativo" id="">Ativo
-        </div>
-    
-        <select name="estado">
-            <option value="">Selecione</option>
-            <option value="ac">Acre</option>
-            <option value="ba">Bahia</option>
-            <option value="ce">Ceará</option>
-        </select>
-    
-        <select name="interesses" multiple size="6">
-            <option value="js">JavaScript</option>
-            <option value="java">Java</option>
-            <option value="php">PHP</option>
-            <option value="python">Python</option>
-            <option value="go">GO</option>
-            <option value="c">C</option>
-    
-        </select>
-    
-        <button formaction="http://localhost:8080/join-us">Incluir</button>
-        <button formaction="http://localhost:8080/join-us">Alterar</button>
-    </form>
-
-    <span id='ola'></span>
 
     <div id="footer"></div>
 </body>
