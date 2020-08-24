@@ -1,3 +1,29 @@
 body{
     font-family: 'Montserrat'!important;
 }
+.text,
+.title{
+    text-align: center;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 900;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.text{
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%; 
+    font-weight: 600;
+}
+
+.blue{
+    background: rgb(92, 120, 135);
+    color: white;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 40px;
+}
