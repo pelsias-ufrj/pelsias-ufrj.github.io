@@ -11,13 +11,9 @@ body{
     flex-direction: column;
 }
 
-.carousel-container {
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    max-height: 600px;
-    align-self: center;
-    padding: 30px;
+.cards-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .item-name {
