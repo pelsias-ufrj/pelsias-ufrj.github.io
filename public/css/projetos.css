@@ -7,8 +7,19 @@ body{
     max-width: 300px;
     padding: 0 30px;
     margin: 32px auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.carousel {
-    padding-bottom: 30px;
+.cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-name {
+    color: #000;
+}
+
+.item-description {
+    color: #000;
 }
