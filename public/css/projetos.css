@@ -40,3 +40,44 @@ body{
 .item-description {
     color: #000;
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pessoa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pessoa img{
+    height: calc(150px + 2vw);
+    border-radius: 50%;
+}
+.pessoa a p{
+    display: block;
+    transition-duration: 500ms;
+    opacity: 0;
+    text-align: center;
+    
+}
+.pessoa a:hover p{
+    display: block;
+    transition-duration: 500ms;
+    transform: translateY(-100px);
+    opacity: 1;
+}   
+.pessoa img:hover{
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    opacity:1
+}   
+.pessoa p:hover{
+    opacity:1
+}   
