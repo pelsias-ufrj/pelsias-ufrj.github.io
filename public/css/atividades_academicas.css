@@ -138,3 +138,24 @@ body{
   margin-left: 10%;
   margin-right: 10%;
 }
+@media only screen and (max-width: 800px) {
+  .img-fluid{
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .linha {
+      flex-direction:column;
+  }
+  
+  .text{
+      margin-left: 10%;
+      margin-right: 10%; 
+  }
+  .card-deck{
+      flex-direction:column;
+      margin-left: 10%;
+      margin-right: 10%;
+      }
+  }

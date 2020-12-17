@@ -42,3 +42,34 @@ body{
 .icon:hover{
     color: black;
 }
+@media only screen and (max-width: 880px) {
+    .img-fluid{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+        flex-direction: column-reverse;
+        padding-top: 0px;
+    }
+
+    .wrapper{
+        padding-left:0px;
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    iframe{
+        width: 400px;
+        margin:auto;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    iframe{
+        width: 320px;
+        margin:auto;
+    }
+}
