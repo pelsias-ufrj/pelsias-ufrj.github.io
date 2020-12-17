@@ -5,23 +5,44 @@ body{
 }
 
 
+.container{
+  width: 100%;
+  max-width: 300px;
+  padding: 0 30px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .text,
-.title{
-    text-align: center;
+.title,
+.title-equip{
+  text-align: center;
+}
+
+.img-fluid{
+  margin-bottom:40px ;
+}
+
+.title-equip{
+  font-size: 32px;
+  font-weight: 900;
+  padding-top: 20px;
+  margin-bottom: -10px;
 }
 
 .title{
-    font-size: 32px;
-    font-weight: 900;
-    padding-top: 20px;
-    margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: 900;
+  padding-top: 20px;
+  margin-bottom: 50px;
 }
 
 .text{
-    font-size: 18px;
-    margin-left: 15%;
-    margin-right: 15%; 
-    font-weight: 600;
+  font-size: 18px;
+  margin-left: 15%;
+  margin-right: 15%; 
+  font-weight: 600;
 }
 
 .blue{
@@ -80,15 +101,19 @@ body{
   flex-direction: column;
   align-items: center;
 }
-.pessoa img{
+.pessoa a img{
   height: calc(150px + 2vw);
   border-radius: 50%;
+  cursor: pointer;
 }
 .pessoa a p{
   display: block;
   transition-duration: 500ms;
   opacity: 0;
   text-align: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
   
 }
 .pessoa a:hover p{
@@ -96,8 +121,9 @@ body{
   transition-duration: 500ms;
   transform: translateY(-100px);
   opacity: 1;
+  text-decoration: none;
 }   
-.pessoa img:hover{
+.pessoa a img:hover{
   -webkit-filter: brightness(50%);
   -webkit-transition: all 1s ease;
   opacity:1
@@ -105,3 +131,101 @@ body{
 .pessoa p:hover{
   opacity:1
 } 
+.member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.member .member-photo {
+  height: calc(100px + 2vw);
+  border-radius: 50%;
+}
+
+.member .member-name {
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+.member-data {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.member-data h1 {
+  font-size: 20px;
+}
+
+.member-data p {
+  font-size: 15px;
+}
+
+.popup .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  background: #fff;
+  max-width: 600px;
+  max-height: 600px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.popup .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+
+.email-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.lattes-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.linkedin-div{
+  display: flex;
+  flex-direction: row;
+}
+.card-deck{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+}

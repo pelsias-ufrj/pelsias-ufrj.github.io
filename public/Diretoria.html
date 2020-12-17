@@ -14,6 +14,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="/js/initialize.js" type="module"></script>
+      <script src="./js/popupController.js"></script>
   </head>
   <body>
     <div id="header"></div>
@@ -34,9 +35,13 @@
     <div class="wrapper">
       <div class="linha">
         <div class="pessoa">
-          <a href="https://www.linkedin.com/in/ana-luiza-haas-bezerra-baa8351a3/">
-            <img src="./images/aninha.png"><p>LinkedIn da Edson</p></a>      
-          <p>Edson H. Watanabe</p>
+          <a data-name="Prof. Edson H. Watanabe" data-email='watanabe@coe.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+        onclick="openModal(this)"
+        >
+    <img src="./images/andreluiz.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>Prof. Edson H. Watanabe</p>
         </div>         
       </div>
     </div>
@@ -44,26 +49,42 @@
             <div class="wrapper">
               <div class="linha">
                 <div class="pessoa">
-                  <a href=" https://www.linkedin.com/in/laís-crispino-proença-36b9b88b">
-                  <img src="./images/lais.png"><p>LinkedIn da Laís</p></a>
+                  <a data-name="Laís Crispino" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/laís-crispino-proença-36b9b88b"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lais.png">
+              <p>Visualizar Membro</p>
+                </a>
                   <p>Laís Crispino Proença</p>
                   <p><b>Chair</b></p>
                 </div>
                 <div class="pessoa">
-                  <a href="mailto:viniciustmoraes@poli.ufrj.br">
-                  <img src="./images/vinicius.png"><p>Email do Vinícius</p></a>
+                  <a data-name="Vinícius Moraes" data-email='viniciustmoraes@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/vinicius.png">
+              <p>Visualizar Membro</p>
+                </a>
                   <p>Vinícius Moraes</p>
                   <p><b>Vice-Chair</b></p>
                 </div>
                 <div class="pessoa">
-                  <a href="mailto:luizfelipecss@poli.ufrj.br">
-                  <img src="./images/luizfelipe.png"><p>Email do Luiz Felipe</p></a>
+                  <a data-name="Luiz Felipe Corrêa" data-email='luizfelipecss@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/luizfelipe.png">
+              <p>Visualizar Membro</p>
+                </a>
                   <p>Luiz Felipe Corrêa</p>
                   <p><b>Tesoureiro</b></p>
                 </div>
                 <div class="pessoa">
-                  <a href="https://www.linkedin.com/in/tiagoengenhariaeletrica">
-                  <img src="./images/thiago.png"><p>LinkedIn do Thiago</p></a>
+                  <a data-name="Thiago Pinheiro" data-email='luizfelipecss@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/tiagoengenhariaeletrica"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/thiago.png">
+              <p>Visualizar Membro</p>
+                </a>
                   <p>Thiago Pinheiro</p>
                   <p><b>Secretário</b></p>
                 </div>
