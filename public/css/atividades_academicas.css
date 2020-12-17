@@ -70,13 +70,19 @@ body{
   max-height: 600px !important;
 }
 
+.carousel-indicators{
+  border: black;
+  filter: invert();
+}
 
 .carousel-control-prev-icon {
   border: black;
+  filter: invert();
   
 }
 .carousel-control-next-icon {
   border: black;
+  filter: invert();
 }
 .title-eventos{
   font-size: 32px;
