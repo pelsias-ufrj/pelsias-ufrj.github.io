@@ -17,12 +17,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/initialize.js" type="module"></script>
+    <script src="./js/popupController.js"></script>
   </head>
   
   <body>
     <div id="header"></div>
     <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Projetos.png">
-     
+    <div class="text-div">
+      <h2 class ="title">Sobre Nós</h2>
+      <p class="text">A área de projetos do Capítulo Estudantil PELS/IAS – UFRJ contempla a elaboração de projetos, principalmente, mas não exclusivamente, associados à área de eletrônica de potência. O intuito destes projetos é atender demandas acadêmicas e industriais, sempre com um viés prático, ou seja, elaborando um produto que venha a ser utilizado em determinada aplicação.
+        </p>  
+      </div>
+      <div class="text-div">
+        <h2 class="title">Nossos Projetos</h2>
+      </div>
     <div class="container">
       <div class="cards-container">
         <!-- CARD PROJETOS -->
@@ -74,7 +82,7 @@
             <div class="card-body">
               <h3 class = "text-center">Impressora 3D</h3><br>
               <div style="text-align: center;">
-                <button target ="_blank" class ="btn btn-outline-primary" href="/images/Resumo Projeto Impressora 3D.pdf">Saiba mais!</button>
+                <button target ="_blank" class ="btn btn-outline-primary" href="">Saiba mais!</button>
               </div>
             </div>
           </div>
@@ -119,7 +127,7 @@
             <div class="card-body">
               <h3 class = "text-center" >Carregador de Bateria</h3><br>
               <div style="text-align: center;">
-                <button target ="_blank" class ="btn btn-outline-primary" href = "/images/Resumo Projeto Carregador de Bateria.pdf">Saiba mais!</button>
+                <button target ="_blank" class ="btn btn-outline-primary" href = "/public/Projeto Impressora 3D de Baixo Custo.pdf">Saiba mais!</button>
               </div>
             </div>
           </div>
@@ -139,16 +147,21 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <h2 class="text-center">Equipe</h2><br>
+    <div class="container-team">
+      <h2 class="title-equip">Equipe</h2><br>
       <br>
-      <h4 class="text-center">Coordenador</h4>
+      <h4 class="title">Coordenador</h4>
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/andré-guilherme-alves-b5a7b0176">
-              <img src="./images/andre.png"><p>LinkedIn do André</p></a>      
+            <a data-name=" André Alves" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-guilherme-alves-b5a7b0176/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/andre.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>André Guilherme Peixoto Alves</p>
+          
           </div>         
         </div>
       </div>
@@ -157,54 +170,177 @@
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/janito-dos-santos/">
-            <img src="./images/janito.png"><p>LinkedIn do Janito</p></a>
+            <a data-name=" Janito Ramos" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/janito-dos-santos/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/janito.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Janito Ramos</p>
           </div>
           <div class="pessoa">
-            <a href="mailto:p.152@hotmail.com">
-            <img src="./images/paulo.png"><p>Email do Paulo</p></a>
+            <a data-name=" Paulo Tadeu" data-email=' p.152@hotmail.com' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/paulo.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Paulo Tadeu</p>
           </div>
           <div class="pessoa">
-            <img src="">
-            <p>Gleydson Neves</p>
+            <a data-name=" Gleydson Neves" data-email=' gleydson_neves94@hotmail.com' data-lattes=" Link genérico" data-linkedin=""
+            onclick="openModal(this)"
+            >
+        <img src="./images/gleydson.png">
+        <p>Visualizar Membro</p>
+    </a>   
+      <p>Gleydson Neves</p>
           </div>
         </div>
         <div class="linha">
           <div class="pessoa">
-            <a href="lukasmuller.me">
-            <img src="./images/lukas.png"><p>Site do Lukas</p></a>
+            <a data-name=" Lukas Müller" data-email='lukasmuller.me' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lukas.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Lukas Müller</p>
           </div>
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/matheus-pereira-moraes-0985bab4/">
-            <img src="./images/matheus.png"><p>LinkedIn do Matheus</p></a>
+            <a data-name="Matheus Moraes" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/matheus-pereira-moraes-0985bab4/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/matheus.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Matheus Moraes</p>
           </div>
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/">
-            <img src="./images/lucas.png"><p>LinkedIn do Lucas</p></a>
+            <a data-name="Lucas Ferreira" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lucas.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Lucas Ferreira</p>
           </div>
           <div class="pessoa">
-            <img src="">
+            <a data-name="Paolo Erazo" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/paolo-erazo-b637a9ab/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/paolo.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Paolo Erazo</p>
           </div>
           </div>
-        </div>
         
-      </div>
-      <div class="wrapper">
-        <div class="linha">
-          <div class="pessoa">
-            <a href="www.linkedin.com/in/andré-luiz-rosário-de-azevedo-268b681b6">
-              <img src="./images/andreluiz.png"><p>LinkedIn do André</p></a>      
-            <p>André Luiz Rosário</p>
-          </div>         
+        
+      
+      <div class="linha">
+        <div class="pessoa">
+          <a data-name="Marcos Vinicios" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/marcos--lima/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/marcos_vinicios.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Marcos Vinicios</p>
         </div>
+        <div class="pessoa">
+          <a data-name="Giulia Silva" data-email='' data-lattes=" Link genérico" data-linkedin="https://linkedin.com/in/giulia-da-silva-107499171/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/Giulia .jpg">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Giulia Silva</p>
+      </div>
+      <div class="pessoa">
+        <a data-name="André Luiz Rosário" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-luiz-ros%C3%A1rio-de-azevedo-268b681b6/"
+        onclick="openModal(this)"
+        >
+    <img src="./images/andreluiz.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>André Luiz Rosário</p>
+      </div>
+      <div class="pessoa">
+        <a data-name="Gabriel Antero" data-email='' data-lattes=" Link genérico" data-linkedin=" www.linkedin.com/in/gabriel-antero-83519412a/"
+        onclick="openModal(this)"
+        >
+    <img src="./images/gabrielantero.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>Gabriel Antero</p>
+    </div>
+  </div>
+    <div class="linha">
+      <div class="pessoa">
+        <a data-name="João Amaral" data-email='jmtamaral@coppe.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+        onclick="openModal(this)"
+        >
+    <img src="./images/joaoamaral.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>João Amaral</p>
+      </div>
+      <div class="pessoa">
+        <a data-name="Giovanni Prieto" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/giovanni-prieto-488802187"
+        onclick="openModal(this)"
+        >
+    <img src="./images/giovanni.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>Giovanni Prieto</p>
+    </div>
+    <div class="pessoa">
+      <a data-name="Carolina Mendonça" data-email='carolina.mendonca@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+      onclick="openModal(this)"
+      >
+  <img src="./images/carol.png">
+  <p>Visualizar Membro</p>
+</a>   
+<p>Carolina Mendonça</p>
+    </div>
+    <div class="pessoa">
+      <a data-name="Leonardo França" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/leonardo-fran%C3%A7a-2435b328/"
+      onclick="openModal(this)"
+      >
+  <img src="./images/leonardofranca.png">
+  <p>Visualizar Membro</p>
+</a>   
+<p>Leonardo França</p>
+    </div>
       </div>
       
     <div id="footer"></div>
+        <!--MODAL START-->
+        <div class="popup" id="popup-1">
+          <div class="overlay" id="overlay"></div>
+          <div class="content" id="modal">
+            <div class="member">
+              <img class="member-photo" src="/images/Equipe 1.png">
+              <h1 class="member-name" id='name'>Nome do Membro</h1>
+            </div>
+            <div class="member-data">
+              <h1>Dados do membro</h1>
+              <div class='email-div'>
+                <p>Email: </p>
+                <p id='email'></p>
+              </div>
+              <div class='lattes-div'>
+                <p>Lattes: </p>
+                <p id='lattes'></p>
+              </div>
+              <div class='linkedin-div'>
+                <p>Linkedin: </p>
+                <p id='link'></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MODAL END-->
   </body>
 </html>

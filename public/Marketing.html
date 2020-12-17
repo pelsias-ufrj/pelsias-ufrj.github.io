@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/initialize.js" type="module"></script>
+    <script src="./js/popupController.js"></script>
   </head>
   
   <body>
@@ -29,16 +30,21 @@
       Mexemos muito com escrita de textos, edição de imagens e principalmente com a criatividade para pensar novos temas de postagem.
       </p>
 
-  <div class="container">
-    <h2 class="text-center">Equipe</h2><br>
+  <div class="container-team">
+    <h2 class="title-equip">Equipe</h2><br>
     <br>
-    <h4 class="text-center">Coordenadora</h4>
+    <h4 class="text">Coordenadora</h4>
     <div class="wrapper">
       <div class="linha">
         <div class="pessoa">
-          <a href="https://www.linkedin.com/in/ana-luiza-haas-bezerra-baa8351a3/">
-            <img src="./images/aninha.png"><p>LinkedIn da Ana</p></a>      
-          <p>Ana Luiza Haas Bezerra</p>
+          <a data-name=" Ana Luiza Haas" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/ana-luiza-haas-bezerra-baa8351a3/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/aninha.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Ana Luiza Haas Bezerra</p>
+          
         </div>         
       </div>
     </div>
@@ -47,19 +53,60 @@
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/">
-            <img src="./images/lucas.png"><p>LinkedIn do Lucas</p></a>
+            <a data-name="Lucas Ferreira" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lucas.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Lucas Ferreira</p>
           </div>
           <div class="pessoa">
-            <a href="mailto:marcosjorge.7@poli.ufrj.br">
-            <img src="./images/marcos.png"><p>Email do Marcos</p></a>
+            <a data-name="Marcos Jorge" data-email='marcosjorge.7@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/marcos.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Marcos Jorge</p>
           </div>
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/rodrigo-bagdadi-benoliel-194516156/">
-            <img src="./images/bagdadi.png"><p>LinkedIn do Rodrigo</p></a>
+            <a data-name="Rodrigo Bagdadi" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/rodrigo-bagdadi-benoliel-194516156/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/bagdadi.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>Rodrigo Bagdadi</p>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="pessoa">
+            <a data-name="João Amaral" data-email='jmtamaral@coppe.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+        onclick="openModal(this)"
+        >
+    <img src="./images/joaoamaral.png">
+    <p>Visualizar Membro</p>
+</a>   
+  <p>João Amaral</p>
+          </div>
+          <div class="pessoa">
+            <a data-name="Karin Stayssy" data-email='karinstayssy2@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+        onclick="openModal(this)"
+        >
+      <img src="./images/karin.png">
+      <p>Visualizar Membro</p>
+          </a>   
+      <p>Karin Stayssy</p>
+          </div>
+          <div class="pessoa">
+            <a data-name="Carolina Mendonça" data-email='carolina.mendonca@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+            onclick="openModal(this)"
+            >
+        <img src="./images/carol.png">
+        <p>Visualizar Membro</p>
+      </a>   
+      <p>Carolina Mendonça</p>
           </div>
         </div>
       </div>
@@ -71,42 +118,90 @@
           <div class="wrapper">
             <div class="linha">
               <div class="pessoa">
-                <a href="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/">
-                <img src="./images/lucas.png"><p>LinkedIn do Lucas</p></a>
-                <p>Lucas Ferreira</p>
+                <a data-name="Lucas Ferreira" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lucas.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Lucas Ferreira</p>
               </div>
               <div class="pessoa">
-                <a href="lukasmuller.me">
-                <img src="./images/lukas.png"><p>Site do Lukas</p></a>
-                <p>Lukas Müller</p>
+                <a data-name=" Lukas Müller" data-email='lukasmuller.me' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/lukas.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Lukas Müller</p>
               </div>
               <div class="pessoa">
-                <a href="pedrolidio@poli.ufrj.br">
-                <img src="./images/pedro.png"><p>Email do Pedro</p></a>
-                <p>Pedro Lidio</p>
+                <a data-name=" Pedro Lidio" data-email='pedrolidio@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/pedro.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Pedro Lidio</p>
               </div>  
             </div>
             <div class="linha">
               <div class="pessoa">
-                <a href="https://www.linkedin.com/in/marcos--lima/">
-                <img src="./images/marcos_vinicios.png"><p>LinkedIn do Marcos</p></a>
-                <p>Marcos Vinicios</p>
+                <a data-name="Marcos Vinicios" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/marcos--lima/"
+                  onclick="openModal(this)"
+                  >
+              <img src="./images/marcos_vinicios.png">
+              <p>Visualizar Membro</p>
+          </a>   
+            <p>Marcos Vinicios</p>
               </div>
               <div class="pessoa">
-
-                <a href="https://linkedin.com/in/giulia-da-silva-107499171/">
-                <img src="./images/Giulia .jpg"><p>LinkedIn da Giulia</p></a>
-                <p>Giulia Silva</p>
+                <a data-name="Giulia Silva" data-email='' data-lattes=" Link genérico" data-linkedin="https://linkedin.com/in/giulia-da-silva-107499171/"
+                onclick="openModal(this)"
+                >
+            <img src="./images/Giulia .jpg">
+            <p>Visualizar Membro</p>
+        </a>   
+          <p>Giulia Silva</p>
             </div>
             <div class="pessoa">
-                <a href="www.linkedin.com/in/andré-luiz-rosário-de-azevedo-268b681b6">
-                <img src="./images/andreluiz.png"><p>LinkedIn do André</p></a>
-                <p>André Luiz Rosário</p>
+              <a data-name="André Luiz Rosário" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-luiz-ros%C3%A1rio-de-azevedo-268b681b6/"
+              onclick="openModal(this)"
+              >
+          <img src="./images/andreluiz.png">
+          <p>Visualizar Membro</p>
+      </a>   
+        <p>André Luiz Rosário</p>
             </div>
             </div>
           </div>
          
     <div id="footer"></div>  
-    
+        <!--MODAL START-->
+        <div class="popup" id="popup-1">
+          <div class="overlay" id="overlay"></div>
+          <div class="content" id="modal">
+            <div class="member">
+              <img class="member-photo" src="/images/Equipe 1.png">
+              <h1 class="member-name" id='name'>Nome do Membro</h1>
+            </div>
+            <div class="member-data">
+              <h1>Dados do membro</h1>
+              <div class='email-div'>
+                <p>Email: </p>
+                <p id='email'></p>
+              </div>
+              <div class='lattes-div'>
+                <p>Lattes: </p>
+                <p id='lattes'></p>
+              </div>
+              <div class='linkedin-div'>
+                <p>Linkedin: </p>
+                <p id='link'></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MODAL END-->
   </body>
 </html>
