@@ -1,0 +1,97 @@
+.member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.member .member-photo {
+    height: calc(100px + 2vw);
+    border-radius: 50%;
+}
+
+.member .member-name {
+    font-size: 25px;
+    padding-left: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.member-data {
+    padding-top: 20px;
+    text-align: left;
+}
+
+.member-data div {
+    display: flex;
+    flex-direction: row;
+}
+
+.member-data h1 {
+    font-size: 20px;
+}
+
+.member-data p {
+    font-size: 15px;
+    padding-right: 8px;
+}
+
+.member-data a {
+    font-size: 15px;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #fff;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 400px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+.email-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.lattes-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.linkedin-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.website-div{
+    display: flex;
+    flex-direction: row;
+}
