@@ -1,8 +1,9 @@
 body{
     font-family: 'Montserrat'!important;
+    height:100vh !important;
 }
 
-.container {
+.container{
     width: 100%;
     max-width: 300px;
     padding: 0 30px;
@@ -11,34 +12,43 @@ body{
     flex-direction: column;
 }
 
-.carousel {
-    padding-bottom: 30px;
-}
-.div-membros{
-    display: flex;
-    justify-content: space-between;
+.text,
+.title,
+.title-equip{
+    text-align: center;
 }
 
-.container-membros{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 2em;
-    width: 100%;
-    padding: 0 30px;
-    margin: 32px auto
-}
-.cards-container {
-    display: flex;
-    flex-direction: row;
+.img-fluid{
+    margin-bottom:40px ;
 }
 
-.item-name {
-    color: #000;
+.title-equip{
+    font-size: 32px;
+    font-weight: 900;
+    padding-top: 20px;
+    margin-bottom: -10px;
 }
 
-.item-description {
-    color: #000;
+.title{
+    font-size: 32px;
+    font-weight: 900;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.text{
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%; 
+    font-weight: 600;
+}
+
+.blue{
+    background: rgb(92, 120, 135);
+    color: white;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 40px;
 }
 .wrapper{
     display: flex;
@@ -56,15 +66,19 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.pessoa img{
+.pessoa a img{
     height: calc(150px + 2vw);
     border-radius: 50%;
+    cursor: pointer;
 }
 .pessoa a p{
     display: block;
     transition-duration: 500ms;
     opacity: 0;
     text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
     
 }
 .pessoa a:hover p{
@@ -72,15 +86,17 @@ body{
     transition-duration: 500ms;
     transform: translateY(-100px);
     opacity: 1;
+    text-decoration: none;
 }   
-.pessoa img:hover{
+.pessoa a img:hover{
     -webkit-filter: brightness(50%);
     -webkit-transition: all 1s ease;
     opacity:1
 }   
 .pessoa p:hover{
     opacity:1
-}   
+} 
+
 .member {
     display: flex;
     flex-direction: row;
@@ -179,3 +195,24 @@ body{
     margin-left: 10%;
     margin-right: 10%;
 }
+@media only screen and (max-width: 800px) {
+    .img-fluid{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .linha {
+        flex-direction:column;
+    }
+    
+    .text{
+        margin-left: 10%;
+        margin-right: 10%; 
+    }
+    .card-deck{
+        flex-direction:column;
+        margin-left: 10%;
+        margin-right: 10%;
+        }
+    }
