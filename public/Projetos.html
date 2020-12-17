@@ -7,6 +7,7 @@
     <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="/css/projetos.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/member_modal.css" rel="stylesheet" type="text/css"/>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -34,16 +35,16 @@
     <div class="container">
       <div class="cards-container">
         <!-- CARD PROJETOS -->
-        <div class="col-4">
+  <!--  <div class="col-4"> -->
           <div class ="card">
             <div class="card-body">
               <h3 class = "card-title">Projetos</h3>
               <p class = "card-text">Resumo de Projetos</p>
             </div>
           </div>
-        </div>
+  <!--  </div> -->
         <!-- CARD IMPRESSORA 3D -->
-        <div class="col-4">
+  <!--  <div class="col-4"> -->
           <div class ="card">
             <!-- CAROUSEL IMPRESSORA 3D -->
             <div id="carouselPrinter" class="carousel slide" data-ride="carousel" >
@@ -86,9 +87,9 @@
               </div>
             </div>
           </div>
-        </div>
+  <!--  </div> -->
         <!-- CARD CARREGADOR DE BATERIA -->
-        <div class="col-4">
+  <!--  <div class="col-4"> -->
           <div class ="card">
             <!-- CAROUSEL CARREGADOR DE BATERIA -->
             <div id="carouselCharger" class="carousel slide" data-ride="carousel" >
@@ -131,7 +132,7 @@
               </div>
             </div>
           </div>
-        </div>
+  <!--  </div> -->
       </div>
     </div>
 
@@ -154,12 +155,13 @@
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a data-name=" André Alves" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-guilherme-alves-b5a7b0176/"
-                  onclick="openModal(this)"
-                  >
+            <a data-name=" André Guilherme Peixoto Alves" 
+              data-linkedin="https://www.linkedin.com/in/andr%C3%A9-guilherme-alves-b5a7b0176/"
+              data-photo="./images/andre.png"      
+              onclick="openModal(this)">
               <img src="./images/andre.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>André Guilherme Peixoto Alves</p>
           
           </div>         
@@ -170,150 +172,165 @@
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a data-name=" Janito Ramos" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/janito-dos-santos/"
-                  onclick="openModal(this)"
-                  >
+            <a data-name=" Janito Ramos" 
+              data-linkedin="https://www.linkedin.com/in/janito-dos-santos/"
+              data-photo="./images/janito.png"      
+              onclick="openModal(this)">
               <img src="./images/janito.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>Janito Ramos</p>
           </div>
           <div class="pessoa">
-            <a data-name=" Paulo Tadeu" data-email=' p.152@hotmail.com' data-lattes=" Link genérico" data-linkedin=""
-                  onclick="openModal(this)"
-                  >
+            <a data-name=" Paulo Tadeu" 
+              data-email=' p.152@hotmail.com' 
+              data-photo="./images/paulo.png"      
+              onclick="openModal(this)">
               <img src="./images/paulo.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>Paulo Tadeu</p>
           </div>
           <div class="pessoa">
-            <a data-name=" Gleydson Neves" data-email=' gleydson_neves94@hotmail.com' data-lattes=" Link genérico" data-linkedin=""
-            onclick="openModal(this)"
-            >
-        <img src="./images/gleydson.png">
-        <p>Visualizar Membro</p>
-    </a>   
-      <p>Gleydson Neves</p>
+            <a data-name=" Gleydson Neves" 
+              data-email=' gleydson_neves94@hotmail.com' 
+              data-photo="./images/gleydson.png"
+              onclick="openModal(this)">
+              <img src="./images/gleydson.png">
+              <p>Visualizar Membro</p>
+            </a>   
+            <p>Gleydson Neves</p>
           </div>
         </div>
         <div class="linha">
           <div class="pessoa">
-            <a data-name=" Lukas Müller" data-email='lukasmuller.me' data-lattes=" Link genérico" data-linkedin=""
-                  onclick="openModal(this)"
-                  >
+            <a data-name=" Lukas Müller" 
+              data-website='https://lukasmuller.me/' 
+              data-photo="./images/lukas.png"      
+              onclick="openModal(this)">
               <img src="./images/lukas.png">
               <p>Visualizar Membro</p>
           </a>   
             <p>Lukas Müller</p>
           </div>
           <div class="pessoa">
-            <a data-name="Matheus Moraes" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/matheus-pereira-moraes-0985bab4/"
-                  onclick="openModal(this)"
-                  >
+            <a data-name="Matheus Moraes" 
+              data-linkedin="https://www.linkedin.com/in/matheus-pereira-moraes-0985bab4/"
+              data-photo="./images/matheus.png"      
+              onclick="openModal(this)">
               <img src="./images/matheus.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>Matheus Moraes</p>
           </div>
           <div class="pessoa">
-            <a data-name="Lucas Ferreira" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/"
-                  onclick="openModal(this)"
-                  >
+            <a data-name="Lucas Ferreira" 
+              data-linkedin="https://www.linkedin.com/in/lucas-de-souza-ferreira-9b8a9416a/"
+              data-photo="./images/lucas.png"      
+              onclick="openModal(this)">
               <img src="./images/lucas.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>Lucas Ferreira</p>
           </div>
           <div class="pessoa">
-            <a data-name="Paolo Erazo" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/paolo-erazo-b637a9ab/"
-                  onclick="openModal(this)"
-                  >
+            <a data-name="Paolo Erazo" 
+              data-linkedin="https://www.linkedin.com/in/paolo-erazo-b637a9ab/"
+              data-photo="./images/paolo.png"      
+              onclick="openModal(this)">
               <img src="./images/paolo.png">
               <p>Visualizar Membro</p>
-          </a>   
+            </a>   
             <p>Paolo Erazo</p>
           </div>
-          </div>
+        </div>
         
         
       
       <div class="linha">
         <div class="pessoa">
-          <a data-name="Marcos Vinicios" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/marcos--lima/"
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/marcos_vinicios.png">
-              <p>Visualizar Membro</p>
+          <a data-name="Marcos Vinicios" 
+            data-linkedin="https://www.linkedin.com/in/marcos--lima/"
+            data-photo="./images/marcos_vinicios.png"        
+            onclick="openModal(this)">
+            <img src="./images/marcos_vinicios.png">
+            <p>Visualizar Membro</p>
           </a>   
-            <p>Marcos Vinicios</p>
+          <p>Marcos Vinicios</p>
         </div>
         <div class="pessoa">
-          <a data-name="Giulia Silva" data-email='' data-lattes=" Link genérico" data-linkedin="https://linkedin.com/in/giulia-da-silva-107499171/"
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/Giulia .jpg">
-              <p>Visualizar Membro</p>
+          <a data-name="Giulia Silva" 
+            data-linkedin="https://linkedin.com/in/giulia-da-silva-107499171/"
+            data-photo="./images/Giulia .jpg"        
+            onclick="openModal(this)">
+            <img src="./images/Giulia .jpg">
+            <p>Visualizar Membro</p>
           </a>   
-            <p>Giulia Silva</p>
+          <p>Giulia Silva</p>
       </div>
       <div class="pessoa">
-        <a data-name="André Luiz Rosário" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-luiz-ros%C3%A1rio-de-azevedo-268b681b6/"
-        onclick="openModal(this)"
-        >
-    <img src="./images/andreluiz.png">
-    <p>Visualizar Membro</p>
-</a>   
-  <p>André Luiz Rosário</p>
+        <a data-name="André Luiz Rosário" 
+          data-linkedin="https://www.linkedin.com/in/andr%C3%A9-luiz-ros%C3%A1rio-de-azevedo-268b681b6/"
+          data-photo="./images/andreluiz.png"
+          onclick="openModal(this)">
+          <img src="./images/andreluiz.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>André Luiz Rosário</p>
       </div>
       <div class="pessoa">
-        <a data-name="Gabriel Antero" data-email='' data-lattes=" Link genérico" data-linkedin=" www.linkedin.com/in/gabriel-antero-83519412a/"
-        onclick="openModal(this)"
-        >
-    <img src="./images/gabrielantero.png">
-    <p>Visualizar Membro</p>
-</a>   
-  <p>Gabriel Antero</p>
+        <a data-name="Gabriel Antero" 
+          data-linkedin=" www.linkedin.com/in/gabriel-antero-83519412a/"
+          data-photo="./images/gabrielantero.png"
+          onclick="openModal(this)">
+          <img src="./images/gabrielantero.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>Gabriel Antero</p>
+      </div>
     </div>
-  </div>
     <div class="linha">
       <div class="pessoa">
-        <a data-name="João Amaral" data-email='jmtamaral@coppe.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
-        onclick="openModal(this)"
-        >
-    <img src="./images/joaoamaral.png">
-    <p>Visualizar Membro</p>
-</a>   
-  <p>João Amaral</p>
+        <a data-name="João Amaral" 
+          data-email='jmtamaral@coppe.ufrj.br' 
+          data-photo="./images/joaoamaral.png"
+          onclick="openModal(this)">
+          <img src="./images/joaoamaral.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>João Amaral</p>
       </div>
       <div class="pessoa">
-        <a data-name="Giovanni Prieto" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/giovanni-prieto-488802187"
-        onclick="openModal(this)"
-        >
-    <img src="./images/giovanni.png">
-    <p>Visualizar Membro</p>
-</a>   
-  <p>Giovanni Prieto</p>
-    </div>
-    <div class="pessoa">
-      <a data-name="Carolina Mendonça" data-email='carolina.mendonca@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
-      onclick="openModal(this)"
-      >
-  <img src="./images/carol.png">
-  <p>Visualizar Membro</p>
-</a>   
-<p>Carolina Mendonça</p>
-    </div>
-    <div class="pessoa">
-      <a data-name="Leonardo França" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/leonardo-fran%C3%A7a-2435b328/"
-      onclick="openModal(this)"
-      >
-  <img src="./images/leonardofranca.png">
-  <p>Visualizar Membro</p>
-</a>   
-<p>Leonardo França</p>
-    </div>
+        <a data-name="Giovanni Prieto" 
+          data-linkedin="https://www.linkedin.com/in/giovanni-prieto-488802187"
+          data-photo="./images/giovanni.png"
+          onclick="openModal(this)">
+          <img src="./images/giovanni.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>Giovanni Prieto</p>
       </div>
+      <div class="pessoa">
+        <a data-name="Carolina Mendonça" 
+          data-email='carolina.mendonca@poli.ufrj.br' 
+          data-photo="./images/carol.png"
+          onclick="openModal(this)">
+          <img src="./images/carol.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>Carolina Mendonça</p>
+      </div>
+      <div class="pessoa">
+        <a data-name="Leonardo França" 
+          data-email="" data-lattes="" data-linkedin="https://www.linkedin.com/in/leonardo-fran%C3%A7a-2435b328/"
+          data-photo="./images/leonardofranca.png"
+          onclick="openModal(this)">
+          <img src="./images/leonardofranca.png">
+          <p>Visualizar Membro</p>
+        </a>   
+        <p>Leonardo França</p>
+      </div>
+    </div>
       
     <div id="footer"></div>
         <!--MODAL START-->
@@ -321,22 +338,26 @@
           <div class="overlay" id="overlay"></div>
           <div class="content" id="modal">
             <div class="member">
-              <img class="member-photo" src="/images/Equipe 1.png">
+              <img class="member-photo" id='member-img'>
               <h1 class="member-name" id='name'>Nome do Membro</h1>
             </div>
             <div class="member-data">
               <h1>Dados do membro</h1>
-              <div class='email-div'>
+              <div class='email-div' id='email-div'>
                 <p>Email: </p>
                 <p id='email'></p>
               </div>
-              <div class='lattes-div'>
+              <div class='lattes-div' id='lattes-div'>
                 <p>Lattes: </p>
-                <p id='lattes'></p>
+                <a id='lattes' target="_blank"></a>
               </div>
-              <div class='linkedin-div'>
+              <div class='linkedin-div' id='linkedin-div'>
                 <p>Linkedin: </p>
-                <p id='link'></p>
+                <a id='link' target="_blank"></a>
+              </div>
+              <div class='website-div' id='website-div'>
+                <p>Site: </p>
+                <a id='website' target="_blank"></a>
               </div>
             </div>
           </div>

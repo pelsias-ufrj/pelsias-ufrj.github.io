@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
     <link href="/css/diretoria.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/member_modal.css" rel="stylesheet" type="text/css"/>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -35,13 +36,14 @@
     <div class="wrapper">
       <div class="linha">
         <div class="pessoa">
-          <a data-name="Prof. Edson H. Watanabe" data-email='watanabe@coe.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
-        onclick="openModal(this)"
-        >
-    <img src="./images/andreluiz.png">
-    <p>Visualizar Membro</p>
-</a>   
-  <p>Prof. Edson H. Watanabe</p>
+          <a data-name="Prof. Edson H. Watanabe"
+            data-email='watanabe@coe.ufrj.br'
+            data-photo='./images/andreluiz.png'
+            onclick="openModal(this)">
+            <img src="./images/andreluiz.png">
+            <p>Visualizar Membro</p>
+          </a>   
+          <p>Prof. Edson H. Watanabe</p>
         </div>         
       </div>
     </div>
@@ -49,42 +51,46 @@
             <div class="wrapper">
               <div class="linha">
                 <div class="pessoa">
-                  <a data-name="Laís Crispino" data-email='' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/laís-crispino-proença-36b9b88b"
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/lais.png">
-              <p>Visualizar Membro</p>
-                </a>
+                  <a data-name="Laís Crispino Proença" 
+                    data-linkedin="https://www.linkedin.com/in/laís-crispino-proença-36b9b88b"
+                    data-photo='./images/lais.png'
+                    onclick="openModal(this)">
+                    <img src="./images/lais.png">
+                    <p>Visualizar Membro</p>
+                  </a>
                   <p>Laís Crispino Proença</p>
                   <p><b>Chair</b></p>
                 </div>
                 <div class="pessoa">
-                  <a data-name="Vinícius Moraes" data-email='viniciustmoraes@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/vinicius.png">
-              <p>Visualizar Membro</p>
-                </a>
+                  <a data-name="Vinícius Moraes" 
+                    data-email='viniciustmoraes@poli.ufrj.br'  
+                    data-photo='./images/vinicius.png'
+                    onclick="openModal(this)">
+                    <img src="./images/vinicius.png">
+                    <p>Visualizar Membro</p>
+                  </a>
                   <p>Vinícius Moraes</p>
                   <p><b>Vice-Chair</b></p>
                 </div>
                 <div class="pessoa">
-                  <a data-name="Luiz Felipe Corrêa" data-email='luizfelipecss@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin=""
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/luizfelipe.png">
-              <p>Visualizar Membro</p>
-                </a>
+                  <a data-name="Luiz Felipe Corrêa" 
+                    data-email='luizfelipecss@poli.ufrj.br'  
+                    data-photo='./images/luizfelipe.png'
+                    onclick="openModal(this)">
+                    <img src="./images/luizfelipe.png">
+                    <p>Visualizar Membro</p>
+                  </a>
                   <p>Luiz Felipe Corrêa</p>
                   <p><b>Tesoureiro</b></p>
                 </div>
                 <div class="pessoa">
-                  <a data-name="Thiago Pinheiro" data-email='luizfelipecss@poli.ufrj.br' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/tiagoengenhariaeletrica"
-                  onclick="openModal(this)"
-                  >
-              <img src="./images/thiago.png">
-              <p>Visualizar Membro</p>
-                </a>
+                  <a data-name="Thiago Pinheiro" 
+                    data-linkedin="https://www.linkedin.com/in/tiagoengenhariaeletrica"
+                    data-photo='./images/thiago.png'
+                    onclick="openModal(this)">
+                    <img src="./images/thiago.png">
+                    <p>Visualizar Membro</p>
+                  </a>
                   <p>Thiago Pinheiro</p>
                   <p><b>Secretário</b></p>
                 </div>
@@ -96,22 +102,26 @@
               <div class="overlay" id="overlay"></div>
               <div class="content" id="modal">
                 <div class="member">
-                  <img class="member-photo" src="/images/Equipe 1.png">
+                  <img class="member-photo" id='member-img'>
                   <h1 class="member-name" id='name'>Nome do Membro</h1>
                 </div>
                 <div class="member-data">
                   <h1>Dados do membro</h1>
-                  <div class='email-div'>
+                  <div class='email-div' id='email-div'>
                     <p>Email: </p>
                     <p id='email'></p>
                   </div>
-                  <div class='lattes-div'>
+                  <div class='lattes-div' id='lattes-div'>
                     <p>Lattes: </p>
-                    <p id='lattes'></p>
+                    <a id='lattes' target="_blank"></a>
                   </div>
-                  <div class='linkedin-div'>
+                  <div class='linkedin-div' id='linkedin-div'>
                     <p>Linkedin: </p>
-                    <p id='link'></p>
+                    <a id='link' target="_blank"></a>
+                  </div>
+                  <div class='website-div' id='website-div'>
+                    <p>Site: </p>
+                    <a id='website' target="_blank"></a>
                   </div>
                 </div>
               </div>
