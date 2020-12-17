@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/initialize.js" type="module"></script>
+    <script src="./js/popupController.js"></script>
   </head>
   
   <body>
@@ -146,9 +147,13 @@
       <div class="wrapper">
         <div class="linha">
           <div class="pessoa">
-            <a href="https://www.linkedin.com/in/andré-guilherme-alves-b5a7b0176">
-              <img src="./images/andre.png"><p>LinkedIn do André</p></a>      
+            <a data-name=" André Alves" data-email=' Email genérico' data-lattes=" Link genérico" data-linkedin="https://www.linkedin.com/in/andr%C3%A9-guilherme-alves-b5a7b0176/"
+                  onclick="openModal(this)">
+              <img src="./images/andre.png">
+              <p>Visualizar Membro</p>
+          </a>   
             <p>André Guilherme Peixoto Alves</p>
+          
           </div>         
         </div>
       </div>
@@ -243,5 +248,31 @@
       </div>
       
     <div id="footer"></div>
+        <!--MODAL START-->
+        <div class="popup" id="popup-1">
+          <div class="overlay" id="overlay"></div>
+          <div class="content" id="modal">
+            <div class="member">
+              <img class="member-photo" src="/images/Equipe 1.png">
+              <h1 class="member-name" id='name'>Nome do Membro</h1>
+            </div>
+            <div class="member-data">
+              <h1>Dados do membro</h1>
+              <div class='email-div'>
+                <p>Email: </p>
+                <p id='email'></p>
+              </div>
+              <div class='lattes-div'>
+                <p>Lattes: </p>
+                <p id='lattes'></p>
+              </div>
+              <div class='linkedin-div'>
+                <p>Linkedin: </p>
+                <p id='link'></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MODAL END-->
   </body>
 </html>

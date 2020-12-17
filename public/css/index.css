@@ -56,3 +56,61 @@ body{
 	height: 400px;    
 }
 
+@media only screen and (max-width: 1300px) {
+    #news{
+        padding-left:5%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #info{
+        flex-direction: column;
+    }
+    #news{
+        padding-left:0;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    #agenda{
+        padding-left:0;
+        margin: auto;
+    }
+
+    .text{
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+
+    .infotext{
+        text-align: center;
+        font-size:15px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #info{
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .img-fluid{
+        display: none;
+    }
+
+    .resume{
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .google-agenda{
+        width:90%;
+        margin:auto;
+        display: flex;
+    }
+
+    #info{
+        margin-bottom: 60px;
+    }
+}
