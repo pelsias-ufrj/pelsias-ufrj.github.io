@@ -73,16 +73,19 @@ body{
 .carousel-indicators{
   border: black;
   filter: invert();
+  opacity: 0.6;
 }
 
 .carousel-control-prev-icon {
   border: black;
   filter: invert();
+  opacity: 0.6;
   
 }
 .carousel-control-next-icon {
   border: black;
   filter: invert();
+  opacity: 0.6;
 }
 .title-eventos{
   font-size: 32px;
