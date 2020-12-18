@@ -79,7 +79,13 @@ box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
   .dropdown-content a:hover {background-color: #ddd;}
   
   .dropdown:hover .dropdown-content {display: block;}
-  
+
+.social-media-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 980px) {
     .items-div {
         position: unset !important;
@@ -96,7 +102,12 @@ box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
     }  
 
     .navbar-icon{
-      display: none;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .social-media-container i {
+      font-size: 23px;
     }
 }
   
