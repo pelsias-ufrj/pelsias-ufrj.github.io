@@ -53,37 +53,7 @@ body{
     margin-top: 40px;
 }
 
-.carousel{
-  background: #2f4357;
-  
- 
-}
-.carousel-item{
-  text-align: center;
-  min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-  margin: auto;
-}
 
-.carousel-inner img{
-  margin: auto;
-  width:100%;
-  max-height: 600px !important;
-}
-
-.carousel-indicators{
-  border: black;
-  filter: invert();
-}
-
-.carousel-control-prev-icon {
-  border: black;
-  filter: invert();
-  
-}
-.carousel-control-next-icon {
-  border: black;
-  filter: invert();
-}
 .title-eventos{
   font-size: 32px;
   font-weight: 900;
@@ -91,6 +61,18 @@ body{
   margin-bottom: 0px;
   text-align: center;
 }
+
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.cards-container .card {
+  width: 100%;
+}
+
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -159,9 +141,9 @@ body{
       margin-left: 10%;
       margin-right: 10%; 
   }
-  .card-deck{
-      flex-direction:column;
-      margin-left: 10%;
-      margin-right: 10%;
-      }
+  .cards-container{
+    flex-direction:column;
+    margin-left: 10%;
+    margin-right: 10%;
+}
   }
