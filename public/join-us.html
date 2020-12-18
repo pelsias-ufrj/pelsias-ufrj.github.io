@@ -16,131 +16,133 @@
         <script src="/js/form.js" type="module"></script>  
       </head>
 <body>
-    <div id="header"></div>
+    <div class="site-content">
+        <div id="header"></div>
+        
+        <div class="form-style-10">
+            <div class="title-wrapper">
+                <span class="title">Dicas de projetos</span> 
+                <span class="subtitle">
+                    Se você tem uma sugestão interessante de evento ou projeto para o nosso Capítulo fique a vontade para descrever sua sugestão aqui,
+                     gostaríamos de saber apenas algumas informações antes. Vamos lá!
+                </span>
+            </div>
+            <form method="POST" id="form">
+                <div class="section">
+                    <span>1</span>
+                    <div class="line">
+                        Endereço de e-mail
+                        <div id="invalid-email" class="missing">*Campo Obrigatório</div>
+                    </div>
+                </div>
+                <div class="inner-wrap">
+                    <input id="email-input" type="email" name="email" placeholder="Seu e-mail"/>
+                </div>
+            
+                <div class="section">
+                    <span>2</span>
+                    <div class="line">
+                        Nome
+                        <div id="invalid-name" class="missing">*Campo Obrigatório</div>
+                    </div>
+                </div>
+                <div class="inner-wrap">
+                    <input id="name-input" type="text" name="name" placeholder="Sua resposta"/>
+                </div>
+            
+                <div class="section"><span>3</span>Curso</div>
+                    <div class="inner-wrap">
+                        <div class="checkbox">
+                            <input id="eletrica" type="radio" name="curso" value="eng_eletrica" checked>
+                            <label for="eletrica">Engenharia Elétrica</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="eletronica" type="radio" name="curso" value="eng_eletronica">
+                            <label for="eletronica">Engenharia Eletrônica</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="controle" type="radio" name="curso" value="eng_controle">
+                            <label for="controle">Engenharia de Controle e Automação</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="outro" type="radio" name="curso" value="check">
+                            <label for="outro">Outro</label>
+                        </div>
+                </div>
     
-    <div class="form-style-10">
-        <div class="title-wrapper">
-            <span class="title">Dicas de projetos</span> 
-            <span class="subtitle">
-                Se você tem uma sugestão interessante de evento ou projeto para o nosso Capítulo fique a vontade para descrever sua sugestão aqui,
-                 gostaríamos de saber apenas algumas informações antes. Vamos lá!
-            </span>
-        </div>
-        <form method="POST" id="form">
-            <div class="section">
-                <span>1</span>
-                <div class="line">
-                    Endereço de e-mail
-                    <div id="invalid-email" class="missing">*Campo Obrigatório</div>
+                <div class="section">
+                    <span>4</span>
+                    <div class="line">
+                        Período
+                        <div id="invalid-period" class="missing">*Campo Obrigatório</div>
+                    </div>
+                </div>
+                <div class="inner-wrap">
+                    <input id="period-input" type="text" name="periodo" placeholder="Sua resposta"/>
+                </div>
+    
+                <div class="section"><span>5</span>Qual a área do Capítulo pela qual você mais se interessa?</div>
+                    <div class="inner-wrap">
+                        <div class="checkbox">
+                            <input id="elepot" type="radio" name="area" value="elepot">
+                            <label for="elepot">Eletrônica de Potência</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="apli_ind" type="radio" name="area" value="apli_ind">
+                            <label for="apli_ind">Aplicações Industriais</label>
+                        </div>
+                </div>
+    
+                <div class="section"><span>6</span>A sua sugestão é para qual coordenação?</div>
+                    <div class="inner-wrap">
+                        <div class="checkbox">
+                            <input id="projetos" type="radio" name="sugestao" value="projetos" checked>
+                            <label for="projetos">Projetos(Concursos, equipamentos inovadores)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="ativ_acad" type="radio" name="sugestao" value="ativ_acad">
+                            <label for="ativ_acad">Atividades Acadêmicas(Palestras, cursos, vídeos)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="marketing" type="radio" name="sugestao" value="marketing">
+                            <label for="marketing">Marketing(Postagens, melhorias no site)</label>
+                        </div>
+                </div>
+    
+                <div class="section">
+                    <span>7</span>
+                    Nos conte a sua sugestão, pode ser uma sugestão de algum concurso do IEEE também.
+                    <div class="missing" id="invalid-text">*Campo Obrigatório</div>
+                </div>
+                <div class="inner-wrap">
+                    <input id="text-input" type="text" name="texto_sug" placeholder="Sua resposta"/>
+                </div>
+    
+    
+                <div class="button-section">
+                </div>
+            </form>
+            <button id="send-form" class="send-button" formaction="http://localhost:8080/join-us.html">Enviar</button>
+            </div>
+    
+            <div id="modal" class="modal">
+                <!-- Start Modal content -->
+                 <div class="modal-content">
+                     <div class="modal-title">
+                        <p>Formulário Enviado!</p> 
+                     </div>
+                     <div class="modal-text-wrapper">
+                        <div class="text">
+                            <p>A equipe PELS/IAS agradece pelas ideias compatilhadads e pelo seu interesse em participar da nossa equipe!</p>
+                            <p>Assim que possível enviaremos um feedback pelo email fornecido no formulário.</p>
+                        </div> 
+                     </div>
+                     <div class="modal-button-wrapper">
+                        <button class="close-button" id="close-button">Fechar!</button>
+                     </div>
                 </div>
             </div>
-            <div class="inner-wrap">
-                <input id="email-input" type="email" name="email" placeholder="Seu e-mail"/>
-            </div>
-        
-            <div class="section">
-                <span>2</span>
-                <div class="line">
-                    Nome
-                    <div id="invalid-name" class="missing">*Campo Obrigatório</div>
-                </div>
-            </div>
-            <div class="inner-wrap">
-                <input id="name-input" type="text" name="name" placeholder="Sua resposta"/>
-            </div>
-        
-            <div class="section"><span>3</span>Curso</div>
-                <div class="inner-wrap">
-                    <div class="checkbox">
-                        <input id="eletrica" type="radio" name="curso" value="eng_eletrica" checked>
-                        <label for="eletrica">Engenharia Elétrica</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="eletronica" type="radio" name="curso" value="eng_eletronica">
-                        <label for="eletronica">Engenharia Eletrônica</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="controle" type="radio" name="curso" value="eng_controle">
-                        <label for="controle">Engenharia de Controle e Automação</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="outro" type="radio" name="curso" value="check">
-                        <label for="outro">Outro</label>
-                    </div>
-            </div>
-
-            <div class="section">
-                <span>4</span>
-                <div class="line">
-                    Período
-                    <div id="invalid-period" class="missing">*Campo Obrigatório</div>
-                </div>
-            </div>
-            <div class="inner-wrap">
-                <input id="period-input" type="text" name="periodo" placeholder="Sua resposta"/>
-            </div>
-
-            <div class="section"><span>5</span>Qual a área do Capítulo pela qual você mais se interessa?</div>
-                <div class="inner-wrap">
-                    <div class="checkbox">
-                        <input id="elepot" type="radio" name="area" value="elepot">
-                        <label for="elepot">Eletrônica de Potência</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="apli_ind" type="radio" name="area" value="apli_ind">
-                        <label for="apli_ind">Aplicações Industriais</label>
-                    </div>
-            </div>
-
-            <div class="section"><span>6</span>A sua sugestão é para qual coordenação?</div>
-                <div class="inner-wrap">
-                    <div class="checkbox">
-                        <input id="projetos" type="radio" name="sugestao" value="projetos" checked>
-                        <label for="projetos">Projetos(Concursos, equipamentos inovadores)</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="ativ_acad" type="radio" name="sugestao" value="ativ_acad">
-                        <label for="ativ_acad">Atividades Acadêmicas(Palestras, cursos, vídeos)</label>
-                    </div>
-                    <div class="checkbox">
-                        <input id="marketing" type="radio" name="sugestao" value="marketing">
-                        <label for="marketing">Marketing(Postagens, melhorias no site)</label>
-                    </div>
-            </div>
-
-            <div class="section">
-                <span>7</span>
-                Nos conte a sua sugestão, pode ser uma sugestão de algum concurso do IEEE também.
-                <div class="missing" id="invalid-text">*Campo Obrigatório</div>
-            </div>
-            <div class="inner-wrap">
-                <input id="text-input" type="text" name="texto_sug" placeholder="Sua resposta"/>
-            </div>
-
-
-            <div class="button-section">
-            </div>
-        </form>
-        <button id="send-form" class="send-button" formaction="http://localhost:8080/join-us.html">Enviar</button>
-        </div>
-
-        <div id="modal" class="modal">
-            <!-- Start Modal content -->
-             <div class="modal-content">
-                 <div class="modal-title">
-                    <p>Formulário Enviado!</p> 
-                 </div>
-                 <div class="modal-text-wrapper">
-                    <div class="text">
-                        <p>A equipe PELS/IAS agradece pelas ideias compatilhadads e pelo seu interesse em participar da nossa equipe!</p>
-                        <p>Assim que possível enviaremos um feedback pelo email fornecido no formulário.</p>
-                    </div> 
-                 </div>
-                 <div class="modal-button-wrapper">
-                    <button class="close-button" id="close-button">Fechar!</button>
-                 </div>
-            </div>
-        </div>
-    <div id="footer"></div>
+        <div id="footer"></div>
+    </div>
 </body>
 </html>
