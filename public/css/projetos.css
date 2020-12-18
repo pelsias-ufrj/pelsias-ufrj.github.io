@@ -108,6 +108,20 @@ body{
     width: 100%;
 }
 
+.carousel-indicators{
+    filter: invert();
+    opacity: 0.6;
+}
+
+.carousel-control-prev-icon {
+    filter: invert();
+    opacity: 0.6;
+  }
+  .carousel-control-next-icon {
+    filter: invert();
+    opacity: 0.6;
+  }
+
 @media only screen and (max-width: 800px) {
     .img-fluid{
         display: none;
