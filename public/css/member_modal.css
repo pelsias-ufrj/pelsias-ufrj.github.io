@@ -95,3 +95,18 @@
     display: flex;
     flex-direction: row;
 }
+
+@media only screen and (max-width: 450px) {
+    .popup .content {
+        max-width: 90vw;
+        min-width: 0px;
+        width: 90vw;
+    }
+
+    .email-div p + p,
+    .lattes-div a,
+    .linkedin-div a,
+    .website-div a {
+        word-break: break-word;
+    }
+}
