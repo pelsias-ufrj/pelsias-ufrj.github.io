@@ -3,6 +3,10 @@ body{
     height:100vh !important;
 }
 
+.page-wrapper {
+    margin: 32px auto;
+}
+
 .text,
 .title{
     text-align: center;
@@ -100,6 +104,10 @@ body{
 
     .resume{
         padding-top: 40px;
+    }
+
+    .title{
+        padding-top: 50px;
     }
 }
 
