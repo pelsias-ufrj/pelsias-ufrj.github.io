@@ -9,6 +9,16 @@ transform: translateY(-3px);
 box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
 }
 
+.navbar {
+  background-color:rgba(255,255,255,0);
+  transition: all 0.4s ease;
+}
+
+.scrolling-active {
+  background-color:rgba(255,255,255,0.85);
+  box-shadow: 0 3px 1rem rgba(0,0,0,0.1);
+}
+
 .items-div {
     position: absolute;
     right: 20px;
@@ -29,19 +39,14 @@ box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
 }
 
 .dropbtn {
-    background-color: white;
+    background-color: rgba(255,255,255,0);
     border: none;
     height: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    opacity: 0.5;
     cursor: pointer;
-  }
-  
-  .dropbtn:hover {
-    opacity: 1;
   }
   
   .dropbtn p {
@@ -90,6 +95,15 @@ box-shadow: 2px 20px 8px 0px rgba(50,50,50,0.45);
     .items-div {
         position: unset !important;
         right: unset !important;
+    }
+
+    .text-white {
+      color: unset !important;
+    }
+
+    .navbar {
+      background-color:rgba(255,255,255,0.85);
+      box-shadow: 0 3px 1rem rgba(0,0,0,0.1);
     }
 
     .dropbtn p {

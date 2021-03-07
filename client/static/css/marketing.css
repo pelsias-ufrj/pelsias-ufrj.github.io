@@ -7,6 +7,10 @@ body{
     padding: 40px
 }
 
+.text-div {
+    margin: 32px auto;
+}
+
 .text,
 .title,
 .title-equip{
@@ -101,6 +105,10 @@ body{
 @media only screen and (max-width: 800px) {
     .img-fluid{
         display: none;
+    }
+    
+    .title{
+        padding-top: 50px;
     }
 }
 

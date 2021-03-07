@@ -15,12 +15,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
-  <div class="navbar-brand" id="title">
+<script src="/js/navbarController.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="navbar-brand" id="title-icon">
     <img class="pels-icon" alt="PELS" src ="/images/logo_oficial.png">
 
   </div>
-  <div class="navbar-brand" id="title">
+  <div class="navbar-brand text-white" id="title">
     SBC IEEE PELS/IAS UFRJ
 
   </div>
@@ -31,11 +33,11 @@
   <div class="collapse navbar-collapse items-div" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active navbar-item">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link text-white" id="home" href="/">Home</a>
       </li>
 
       <li class="nav-item dropdown navbar-item">
-        <div class="dropbtn">
+        <div class="dropbtn text-white" id="equipe" onmouseover="HoverOpacity(this)" onmouseout="UnhoverOpacity(this)">
           <p>Equipe</p>
           <i class="fas fa-angle-down"></i>
         </div>
@@ -46,7 +48,7 @@
       </li>
 
       <li class="nav-item dropdown navbar-item">
-        <div class="dropbtn">
+        <div class="dropbtn text-white" id="coordenacoes" onmouseover="HoverOpacity(this)" onmouseout="UnhoverOpacity(this)">
           <p>Coordenações</p>
           <i class="fas fa-angle-down"></i>
         </div>
@@ -59,24 +61,24 @@
       </li>
 
       <li class="nav-item navbar-item">
-        <a class="nav-link" href="contato">Contato</a>
+        <a class="nav-link text-white" id="contato" href="contato">Contato</a>
       </li>
       <li class="nav-item navbar-item">
-        <a class="nav-link" href="blog">Blog</a>
+        <a class="nav-link text-white" id="blog" href="blog">Blog</a>
       </li>
       <li class="navbar-item border-left"></li>
       <div class="social-media-container">
         <li class="nav-item navbar-icon" id="facebook">
-          <a class="nav-link" href="https://www.facebook.com/ufrjpels"><i class="fab fa-facebook-f"></i></a>
+          <a class="nav-link text-white" id="facebook-icon" href="https://www.facebook.com/ufrjpels"><i class="fab fa-facebook-f"></i></a>
         </li>
         <li class="nav-item navbar-icon" id="insta">
-          <a class="nav-link" href="https://www.instagram.com/pelsias.ufrj/?hl=pt-br"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link text-white" id="insta-icon" href="https://www.instagram.com/pelsias.ufrj/?hl=pt-br"><i class="fab fa-instagram"></i></a>
         </li>
         <li class="nav-item navbar-icon" id="linkedin">
-          <a class="nav-link" href="https://www.linkedin.com/company/pels-ufrj/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="nav-link text-white" id="linkedin-icon" href="https://www.linkedin.com/company/pels-ufrj/"><i class="fab fa-linkedin-in"></i></a>
         </li>
         <li class="nav-item navbar-icon" id="youtube">
-          <a class="nav-link" href="https://www.youtube.com/channel/UCJKbHtELOOE_molSxbkS51w"><i class="fab fa-youtube"></i></a>
+          <a class="nav-link text-white" id="youtube-icon" href="https://www.youtube.com/channel/UCJKbHtELOOE_molSxbkS51w"><i class="fab fa-youtube"></i></a>
         </li>
       </div>
     </ul>
