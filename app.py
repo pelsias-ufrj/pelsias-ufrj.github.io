@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_pymongo import PyMongo
 
 server = Flask(
     __name__, 

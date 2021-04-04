@@ -1,6 +1,14 @@
 from flask import Blueprint, render_template, request, jsonify
+# from app import mongo
+from bson.json_util import dumps
+from pymongo import MongoClient
 
 routes = Blueprint('routes', __name__)
+
+client = MongoClient('mongodb+srv://pelsias:ieee2019@site.kpj4s.gcp.mongodb.net/pelsiasdb?retryWrites=true&w=majority')
+db = client.pelsiasdb
+posts = db.pelsiascollection
+sugestions = db.sugestions
 
 
 @routes.route('/')
@@ -37,4 +45,7 @@ def projetos():
 
 @routes.route('/test')
 def test():
+    # online_users = mongo.db.users.find({"online": True})
+    # db.users.insert({"_teste": 'ola teste'})
+    collection.insert({'_teste' : 'ola teste'})
     return 'HELLO WORLD'
