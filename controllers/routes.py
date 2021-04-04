@@ -1,7 +1,7 @@
-from flask import Blueprint, render_template, request, jsonify
-# from app import mongo
+from flask import Blueprint, render_template, request, jsonify, session, redirect
 from bson.json_util import dumps
 from pymongo import MongoClient
+from functools import wraps
 
 routes = Blueprint('routes', __name__)
 
@@ -10,6 +10,16 @@ db = client.pelsiasdb
 posts = db.pelsiascollection
 sugestions = db.sugestions
 
+# Decorators
+def login_required(f):
+  @wraps(f)
+  def wrap(*args, **kwargs):
+    if 'logged_in' in session:
+      return f(*args, **kwargs)
+    else:
+      return redirect('/')
+  
+  return wrap
 
 @routes.route('/')
 def home():
@@ -47,9 +57,16 @@ def projetos():
 def attividades_academicas():
     return render_template('atividades_academicas.html')
 
+@routes.route('/login')
+def login():
+    return render_template('login.html')
+
+@routes.route('/addposts')
+@login_required
+def add_posts():
+    return render_template('addposts.html')
+
 @routes.route('/test')
 def test():
-    # online_users = mongo.db.users.find({"online": True})
-    # db.users.insert({"_teste": 'ola teste'})
     collection.insert({'_teste' : 'ola teste'})
     return 'HELLO WORLD'

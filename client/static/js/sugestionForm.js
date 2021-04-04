@@ -47,10 +47,6 @@ sendBut.addEventListener('click', (e) => {
   }
 });
 
-$('#close-button').on('click', (e) => {
-  
-})
-
 function formSubmited() {
   form.reset();
 }
