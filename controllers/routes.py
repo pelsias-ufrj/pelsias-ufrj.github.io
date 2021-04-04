@@ -43,6 +43,10 @@ def membros():
 def projetos():
     return render_template('projetos.html')
 
+@routes.route('/atividades_academicas')
+def attividades_academicas():
+    return render_template('atividades_academicas.html')
+
 @routes.route('/test')
 def test():
     # online_users = mongo.db.users.find({"online": True})
