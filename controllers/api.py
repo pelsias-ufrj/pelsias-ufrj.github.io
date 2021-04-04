@@ -2,10 +2,11 @@ from flask import Blueprint, render_template, request, jsonify, session, redirec
 import json
 from flask import jsonify
 from pymongo import MongoClient
+import os
 
 api = Blueprint('api', __name__)
-
-client = MongoClient('mongodb+srv://pelsias:ieee2019@site.kpj4s.gcp.mongodb.net/pelsiasdb?retryWrites=true&w=majority')
+MONGO_URI = os.environ['PELS_MONGO_URL']
+client = MongoClient(MONGO_URI)
 db = client.pelsiasdb
 posts = db.pelsiascollection
 users = db.users
