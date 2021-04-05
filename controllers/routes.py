@@ -2,10 +2,11 @@ from flask import Blueprint, render_template, request, jsonify, session, redirec
 from bson.json_util import dumps
 from pymongo import MongoClient
 from functools import wraps
-
+import os
 routes = Blueprint('routes', __name__)
 
-client = MongoClient('mongodb+srv://pelsias:ieee2019@site.kpj4s.gcp.mongodb.net/pelsiasdb?retryWrites=true&w=majority')
+MONGO_URI = os.environ['PELS_MONGO_URL']
+client = MongoClient(MONGO_URI)
 db = client.pelsiasdb
 posts = db.pelsiascollection
 sugestions = db.sugestions
