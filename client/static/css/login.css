@@ -1,0 +1,162 @@
+body{
+    font-family: 'Montserrat'!important;
+}
+@media only screen and (max-width: 800px) {
+    .img-fluid{
+        display: none;
+    }
+}
+
+.form-container {
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    width: 560px;
+    height: min-content;
+    padding: 35px 25px 65px 25px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    box-shadow: 0 0 0.5em rgb(191 191 191);
+}
+
+.form-title {
+    font-weight: 600;
+    font-size: 30px;
+    color: #303030;
+    margin-bottom: 25px;
+}
+
+.register-dialog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+}
+
+.register-dialog p {
+    color: #52504C;
+    margin: 0;
+}
+
+.register-dialog a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-item {
+    width: 100%;
+}
+
+.input {
+    align-self: center;
+    justify-self: center;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    appearance: none;
+    border-radius: 8px;
+    border: 1px solid #EDDDDF;
+    width: -moz-available;
+    width: -webkit-fill-available
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #52504C;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 15px;
+    /* background-color: #B80925; */
+    background: rgb(92, 120, 135);
+    color: #f0f0f0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(92, 120, 135);
+    border: 1px solid rgb(92, 120, 135);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+@media only screen and (max-width: 650px) {
+    .form-container {
+        width: 400px;
+        padding: 25px 15px 55px 15px;
+    }
+    .form-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .register-dialog {
+        font-size: 13px;
+    }
+    .input {
+        height: 30px;
+        font-size: 18px;
+        padding: 8px;
+        margin-top: 17px;
+    }
+    .forgot-password {
+        font-size: 13px;
+    }
+    .btn {
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .form-container {
+        width: 350px;
+    }
+    .register-dialog {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .form-container {
+        width: 300px;
+    }
+    .form-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .register-dialog {
+        font-size: 13px;
+        flex-direction: column;
+    }
+    .register-dialog a {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .form-container {
+        width: 250px;
+    }
+}

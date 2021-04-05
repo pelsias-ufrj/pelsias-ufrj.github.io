@@ -1,4 +1,8 @@
 from flask import Flask
+from flask_pymongo import PyMongo
+import os
+
+key = os.environ['PELS-SECRET-KEY']
 
 server = Flask(
     __name__, 
@@ -6,6 +10,8 @@ server = Flask(
     static_folder='client/static', 
     template_folder='client/templates'
 )
+
+server.secret_key = key
 
 from controllers.routes import routes
 server.register_blueprint(routes)
