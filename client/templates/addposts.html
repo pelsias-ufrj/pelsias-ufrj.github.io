@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link href="/css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/addposts.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="js/editormd/css/editormd.css" type="text/css"/>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -17,12 +18,40 @@
     <script src="/js/addpost.js" type="module"></script>  
 </head>
 <body>
+    <div id="header">{% include "header.html" %}</div>
+    <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Blog.png">
     <div class="site-content">
-        <div id="header">{% include "header.html" %}</div>
-        <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Blog.png">
         Login Realizado
         <!-- <button id='sign-out'>Sign Out</button> -->
         <a href="/api/signout" >Sign Out</a>
+        <div id="test-editor">
+            <textarea style="display:none;">### Editor.md
+
+                **Editor.md**: The open source embeddable online markdown editor, based on CodeMirror & jQuery & Marked.
+            </textarea>
+        </div>
+        <div class='space'>
+            ola teste
+        </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/editormd/editormd.min.js"></script>
+<script src="js/editormd/languages/en.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("test-editor", {
+            width  : "80%",
+            height : "745px",
+            path   : "js/editormd/lib/"
+        });
+        var path  = "js/editormd/languages/en";
+        var value = "en"
+        editormd.loadScript(path, function() {
+        editor.lang = editormd.defaults.lang;
+
+        lang = value;
+    })
+    });
+</script>
 </html>

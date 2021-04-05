@@ -1,0 +1,26 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Montserrat'!important;
+    height: 100%;
+}
+.site-content{
+    height: 100%;   
+}
+.editormd-preview {
+    position: relative !important;
+}
+.editormd {
+    display: flex;
+    /* margin-top: 5000px; */
+}
+.space{
+    padding-top: 20px;
+    visibility: hidden;
+}
+@media only screen and (max-width: 800px) {
+    .img-fluid{
+        display: none;
+    }
+}
