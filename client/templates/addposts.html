@@ -20,15 +20,51 @@
 <body>
     <div id="header">{% include "header.html" %}</div>
     <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Blog.png">
+    <div class="sign-out-wrapper">
+      Login Realizado
+      <!-- <button id='sign-out'>Sign Out</button> -->
+      <a href="/api/signout" >Sign Out</a>
+    </div>
     <div class="site-content">
-        Login Realizado
-        <!-- <button id='sign-out'>Sign Out</button> -->
-        <a href="/api/signout" >Sign Out</a>
-        <div id="test-editor">
-            <textarea style="display:none;">### Editor.md
-
-                **Editor.md**: The open source embeddable online markdown editor, based on CodeMirror & jQuery & Marked.
-            </textarea>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="true">Novo</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Editar</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="new" role="tabpanel" aria-labelledby="new-tab">
+            <div class="title-wrapper">
+              <div class="title-text">Titulo do post:</div>
+              <input class="input" name='username' placeholder="Título do post">
+            </div>
+            <div class='markwon-editor' id="mark-new">
+                <textarea style="display:none;">### Editor.md
+    
+                    **Editor.md**: The open source embeddable online markdown editor, based on CodeMirror & jQuery & Marked.
+                </textarea>
+            </div>
+            <div class="btn-wrapper">
+              <button id="submit" class="btn">Postar</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+            <div class="title-wrapper">
+              <div class="title-text">Titulo do post:</div>
+              <input class="input" name='username' placeholder="Título do post">
+            </div>
+            <div class='markwon-editor' id="mark-editor">
+                <textarea style="display:none;">### Editor.md
+    
+                   Editado
+                </textarea>
+            </div>
+            <div class="btn-wrapper">
+              <button id="submit" class="btn">Postar</button>
+            </div>
+          </div>
         </div>
         <div class='space'>
             ola teste
@@ -40,7 +76,7 @@
 <script src="js/editormd/languages/en.js"></script>
 <script type="text/javascript">
     $(function() {
-        var editor = editormd("test-editor", {
+        var editor = editormd("mark-new", {
             width  : "80%",
             height : "745px",
             path   : "js/editormd/lib/"
@@ -51,7 +87,23 @@
         editor.lang = editormd.defaults.lang;
 
         lang = value;
-    })
+      })
+      
+    });
+    $(function() {
+        var editor = editormd("mark-editor", {
+            width  : "80%",
+            height : "745px",
+            path   : "js/editormd/lib/"
+        });
+        var path  = "js/editormd/languages/en";
+        var value = "en"
+        editormd.loadScript(path, function() {
+        editor.lang = editormd.defaults.lang;
+
+        lang = value;
+      })
+      
     });
 </script>
 </html>

@@ -15,9 +15,70 @@ body{
     display: flex;
     /* margin-top: 5000px; */
 }
+.markwon-editor{
+    /* z-index:2000; */
+}
 .space{
     padding-top: 20px;
     visibility: hidden;
+}
+.input {
+    align-self: center;
+    justify-self: center;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    
+    appearance: none;
+    border-radius: 8px;
+    border: 1px solid #EDDDDF;
+    width: -moz-available;
+    width: 40%
+}
+
+.title-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.title-text{
+    margin:auto 0;
+    margin-right: 25px;
+}
+.sign-out-wrapper{
+    display: flex;
+    flex-direction:row;
+    padding-bottom: 40px;
+}
+.btn {
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 15px;
+    /* background-color: #B80925; */
+    background: rgb(32, 158, 0);
+    color: #f0f0f0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(32, 158, 0);
+    border: 1px solid rgb(32, 158, 0);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+.btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
 }
 @media only screen and (max-width: 800px) {
     .img-fluid{
