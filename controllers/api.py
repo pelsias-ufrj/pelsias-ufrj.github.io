@@ -3,12 +3,13 @@ import json
 from flask import jsonify
 from pymongo import MongoClient
 import os
+import re
 
 api = Blueprint('api', __name__)
 MONGO_URI = os.environ['PELS_MONGO_URL']
 client = MongoClient(MONGO_URI)
 db = client.pelsiasdb
-posts = db.pelsiascollection
+posts = db.posts
 users = db.users
 sugestions = db.sugestions
 
@@ -54,3 +55,16 @@ def login():
 def signout():
     session.clear()
     return redirect('/')
+
+@api.route('/api/posttitles')
+def get_titles():
+    text = request.args.get('text')
+    rgx = re.compile('.*{}.*'.format(text), re.IGNORECASE)
+
+    postList = posts.find({'title':rgx},{'title':1})
+    
+    queryRes = []
+    for x in postList:
+        queryRes.append({'id':str(x['_id']), 'title': x['title']})
+    print(queryRes)
+    return jsonify(queryRes)

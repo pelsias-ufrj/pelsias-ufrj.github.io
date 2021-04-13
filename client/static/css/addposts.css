@@ -80,6 +80,46 @@ body{
     justify-content: flex-end;
     padding-right: 10%;
 }
+
+/* select2-selection {
+    border: 1px solid #ced4da !important;
+    color: #495057 !important;
+    padding-top: 6px !important;
+    min-height: 40px !important;
+    max-height: 135px;
+    overflow: auto;
+}
+
+.select2-selection__rendered {
+    padding-left: 12px !important;
+}
+
+.select2-selection__arrow {
+    top: 8px !important;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+}
+
+.event-body {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.select2-selection--multiple {
+    padding-top: 0px !important
+} */
+
+
+/* .select2{
+    width:50%;
+} */
+
+
 @media only screen and (max-width: 800px) {
     .img-fluid{
         display: none;
