@@ -28,7 +28,7 @@ def home():
 
 @routes.route('/blog')
 def blog():
-    return render_template('blog.html')    
+    return render_template('blog.html')
 
 @routes.route('/contato')
 def contato():
