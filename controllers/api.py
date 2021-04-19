@@ -2,7 +2,10 @@ from flask import Blueprint, render_template, request, jsonify, session, redirec
 import json
 from flask import jsonify
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 import os
+import re
+from datetime import date
 
 api = Blueprint('api', __name__)
 MONGO_URI = os.environ['PELS_MONGO_URL']
@@ -57,20 +60,39 @@ def signout():
 
 @api.route('/api/blog')
 def get_post_preview():
-    _id = "JASDasdiokldhaslihudasiASDJdsakhi"
-    title = "A vida de um pato"
-    img_url = "https://avicultura.info/wp-content/uploads/2018/03/INVESTIGACI%C3%93N-INFLUENZA-AVIAR-Y-DEV--300x300.jpg"
-    views = "8000"
-    date = "7 de março, 2021"
+    # text = request.args.get('text')
+    # rgx = re.compile('.*{}.*'.format(text), re.IGNORECASE)
+    rgx = re.compile('.*', re.IGNORECASE)
 
-    return jsonify({ "id" : _id, "title" : title, "img_url" : img_url, "views" : views, "date" : date})
+    postList = posts.find({'title':rgx},{'title':1, 'url':1, 'views':1, 'date':1})
+    
+    queryRes = []
+    for x in postList:
+        queryRes.append({'id':str(x['_id']), 'title': x['title'], 'url': x['url'], 'views': x['views'], 'date': x['date'].date()})
+    print(queryRes)
+    return jsonify(queryRes)
 
 @api.route('/blog/posts/<post_id>')
 def get_post(post_id):
-    title = "A vida de um pato"
-    img_url = "https://avicultura.info/wp-content/uploads/2018/03/INVESTIGACI%C3%93N-INFLUENZA-AVIAR-Y-DEV--300x300.jpg"
-    content = "Quack quack."
-    views = "8000"
-    date = "7 de março, 2021"
+    post = posts.find({'_id':ObjectId(post_id)}, {'title':1, 'content':1, 'views':1, 'date':1})
 
-    return content
+    queryRes = []
+    for x in post:
+        queryRes.append({'id':str(x['_id']), 'title': x['title'], 'content': x['content'], 'views': x['views'], 'date': x['date'].date()})
+
+    print(queryRes)
+
+    return jsonify(queryRes)
+
+@api.route('/api/posttitles')
+def get_titles():
+    text = request.args.get('text')
+    rgx = re.compile('.*{}.*'.format(text), re.IGNORECASE)
+
+    postList = posts.find({'title':rgx},{'title':1})
+    
+    queryRes = []
+    for x in postList:
+        queryRes.append({'id':str(x['_id']), 'title': x['title']})
+    print(queryRes)
+    return jsonify(queryRes)

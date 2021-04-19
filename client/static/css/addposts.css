@@ -1,0 +1,127 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Montserrat'!important;
+    height: 100%;
+}
+.site-content{
+    height: 100%;   
+}
+.editormd-preview {
+    position: relative !important;
+}
+.editormd {
+    display: flex;
+    /* margin-top: 5000px; */
+}
+.markwon-editor{
+    /* z-index:2000; */
+}
+.space{
+    padding-top: 20px;
+    visibility: hidden;
+}
+.input {
+    align-self: center;
+    justify-self: center;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    
+    appearance: none;
+    border-radius: 8px;
+    border: 1px solid #EDDDDF;
+    width: -moz-available;
+    width: 40%
+}
+
+.title-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.title-text{
+    margin:auto 0;
+    margin-right: 25px;
+}
+.sign-out-wrapper{
+    display: flex;
+    flex-direction:row;
+    padding-bottom: 40px;
+}
+.btn {
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 15px;
+    /* background-color: #B80925; */
+    background: rgb(32, 158, 0);
+    color: #f0f0f0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(32, 158, 0);
+    border: 1px solid rgb(32, 158, 0);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+.btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+
+/* select2-selection {
+    border: 1px solid #ced4da !important;
+    color: #495057 !important;
+    padding-top: 6px !important;
+    min-height: 40px !important;
+    max-height: 135px;
+    overflow: auto;
+}
+
+.select2-selection__rendered {
+    padding-left: 12px !important;
+}
+
+.select2-selection__arrow {
+    top: 8px !important;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+}
+
+.event-body {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.select2-selection--multiple {
+    padding-top: 0px !important
+} */
+
+
+/* .select2{
+    width:50%;
+} */
+
+
+@media only screen and (max-width: 800px) {
+    .img-fluid{
+        display: none;
+    }
+}

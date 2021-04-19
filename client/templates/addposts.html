@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="Description" content="Capítulo Estudantil PELS UFRJ">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link href="/css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/addposts.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="js/editormd/css/editormd.css" type="text/css"/>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,17 +13,99 @@
     <title>Edição</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/addpost.js" type="module"></script>  
 </head>
 <body>
+    <div id="header">{% include "header.html" %}</div>
+    <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Blog.png">
+    <div class="sign-out-wrapper">
+      Login Realizado
+      <!-- <button id='sign-out'>Sign Out</button> -->
+      <a href="/api/signout" >Sign Out</a>
+    </div>
     <div class="site-content">
-        <div id="header">{% include "header.html" %}</div>
-        <img class="img-fluid" width="100%" height="400px" alt="PELS" src ="/images/Blog.png">
-        Login Realizado
-        <!-- <button id='sign-out'>Sign Out</button> -->
-        <a href="/api/signout" >Sign Out</a>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="true">Novo</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Editar</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="new" role="tabpanel" aria-labelledby="new-tab">
+            <div class="title-wrapper">
+              <div class="title-text">Titulo do post:</div>
+              <input class="input" name='username' placeholder="Título do post">
+            </div>
+            <div class='markwon-editor' id="mark-new">
+                <textarea style="display:none;">### Editor.md
+    
+                    **Editor.md**: The open source embeddable online markdown editor, based on CodeMirror & jQuery & Marked.
+                </textarea>
+            </div>
+            <div class="btn-wrapper">
+              <button id="submit" class="btn">Postar</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+            <div class="title-wrapper">
+              <div class="title-text">Titulo do post:</div>
+              <select id='select-edit' name='username' class='select-edit'></select>
+            </div>
+            <div class='markwon-editor' id="mark-editor">
+                <textarea style="display:none;">### Editor.md
+    
+                   Editado
+                </textarea>
+            </div>
+            <div class="btn-wrapper">
+              <button id="submit" class="btn">Postar</button>
+            </div>
+          </div>
+        </div>
+        <div class='space'>
+            ola teste
+        </div>
     </div>
 </body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<script src="js/editormd/editormd.min.js"></script>
+<script src="js/editormd/languages/en.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("mark-new", {
+            width  : "80%",
+            height : "745px",
+            path   : "js/editormd/lib/"
+        });
+        var path  = "js/editormd/languages/en";
+        var value = "en"
+        editormd.loadScript(path, function() {
+        editor.lang = editormd.defaults.lang;
+
+        lang = value;
+      })
+      
+    });
+    $(function() {
+        var editor = editormd("mark-editor", {
+            width  : "80%",
+            height : "745px",
+            path   : "js/editormd/lib/"
+        });
+        var path  = "js/editormd/languages/en";
+        var value = "en"
+        editormd.loadScript(path, function() {
+        editor.lang = editormd.defaults.lang;
+
+        lang = value;
+      })
+      
+    });
+</script>
 </html>
