@@ -6,9 +6,21 @@ const getPosts = (url) => {
         })
         .then((post) => {
             console.log(post);
+            appendPosts (post);
             
 
-                let postPreview =   `<div class="article" style="background-image: url(${post['img_url']})">
+            
+        })
+        .catch((error) => {
+            console.error(error.message);
+        });
+}
+
+getPosts('/api/blog');
+
+function appendPosts (arr) {
+    arr.forEach((post) => {
+        let postPreview =   `<div class="article" style="background-image: url(${post['url']})">
                                         <a href="/blog/posts/${post['id']}">${post['title']}</a>
                                         <hr/>
                                         <div id="bottom">
@@ -19,15 +31,10 @@ const getPosts = (url) => {
                                             ${post['date']}
                                         </div>
                                     </div>`;
-                $('#new-article').append(postPreview);
-            
-        })
-        .catch((error) => {
-            console.error(error.message);
-        });
+    $('#new-article').append(postPreview);
+    })
 }
 
-getPosts('/api/blog');
 
 /*data = await fetchAPIData({token: token, url: `${API_URL}/api/v1/companies/search/items?text=${text}&search_type=${searchType}`})
 
