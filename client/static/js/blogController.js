@@ -31,7 +31,7 @@ function appendPosts (arr) {
                                             ${post['date']}
                                         </div>
                                     </div>`;
-    $('#new-article').append(postPreview);
+    $('#articles-div').append(postPreview);
     })
 }
 

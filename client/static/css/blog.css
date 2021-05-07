@@ -46,7 +46,7 @@ body{
     width: 300px;
     border-radius: 16px;
     box-shadow: 8px 8px 8px 0px rgba(50,50,50,0.45);
-    background-color: darkblue;
+    background-color: rgba(0,0,0, 0.3);
     color: white;
 }
 
