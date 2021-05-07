@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 import os
 import re
 from datetime import date
+import jinja2
 
 api = Blueprint('api', __name__)
 MONGO_URI = os.environ['PELS_MONGO_URL']
@@ -14,6 +15,9 @@ db = client.pelsiasdb
 posts = db.posts
 users = db.users
 sugestions = db.sugestions
+
+template_dir = os.path.join(os.path.dirname(__file__), '../client/templates')
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
 
   
 @api.route('/api/join-us', methods=['POST'])
@@ -69,7 +73,7 @@ def get_post_preview():
     queryRes = []
     for x in postList:
         queryRes.append({'id':str(x['_id']), 'title': x['title'], 'url': x['url'], 'views': x['views'], 'date': x['date'].date()})
-    print(queryRes)
+    # print(queryRes)
     return jsonify(queryRes)
 
 @api.route('/blog/posts/<post_id>')
@@ -80,9 +84,11 @@ def get_post(post_id):
     for x in post:
         queryRes.append({'id':str(x['_id']), 'title': x['title'], 'content': x['content'], 'views': x['views'], 'date': x['date'].date()})
 
-    print(queryRes)
+    # print(queryRes)
 
-    return jsonify(queryRes)
+    template = jinja_env.get_template('blog-post.html')
+
+    return template.render(title=queryRes[0]["title"], content=queryRes[0]["content"])
 
 @api.route('/api/posttitles')
 def get_titles():
