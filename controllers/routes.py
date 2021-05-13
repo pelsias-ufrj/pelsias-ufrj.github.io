@@ -5,6 +5,7 @@ from bson.objectid import ObjectId
 from functools import wraps
 import os
 import jinja2
+import markdown
 
 routes = Blueprint('routes', __name__)
 
@@ -56,7 +57,33 @@ def get_post(post_id):
 
     template = jinja_env.get_template('blog-post.html')
 
-    return template.render(title=queryRes[0]["title"], content=queryRes[0]["content"])
+    return template.render(title=queryRes[0]["title"], content=markdown.markdown(queryRes[0]["content"]))
+
+@routes.route('/blog/updateMarkdown')
+def update():
+    post = posts.find_one({'title':'Título do post teste'})
+
+    post["content"] = """Este é um post teste usando markdown
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Lista
+1. Primeiro item
+1. Segundo item
+1. terceiro item
+1. quarto item
+
+------------
+
+*abaixo da retinha*
+    """
+    posts.save(post)
+    return '<h1>Post teste markdown atualizado!<h1>'
 
 @routes.route('/contato')
 def contato():
