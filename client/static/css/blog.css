@@ -61,6 +61,19 @@ body{
     background-color: white;
 }
 
+.page-nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.page-nav a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #bottom {
     position: absolute;
     bottom: 20px;

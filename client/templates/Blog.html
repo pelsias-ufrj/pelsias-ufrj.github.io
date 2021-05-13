@@ -27,6 +27,16 @@
           <p class="text">Aqui serão expostos links do conteúdo produzido pelo grupo.</h4>
 
           <div id="articles-div" class="articles-container"></div>
+          <div class="page-nav">
+            <a href="/blog/{{previous_page}}">
+              <button>Anterior</button>
+            </a>
+            {{actual_page}}
+            <a href="/blog/{{next_page}}">
+              <button>Próxima</button>
+            </a>
+          </div>
+          <input type="hidden" value="{{actual_page}}" id="blog-page">
         </div>
         <div id="footer">{% include "footer.html" %}</div>  
       </div>

@@ -1,3 +1,9 @@
+window.onload = function () {
+    const page = document.getElementById('blog-page').getAttribute('value');
+    
+    getPosts('/api/blog/' + page);
+}
+
 const getPosts = (url) => {
     fetch(url)
         .then((response) => {
@@ -5,7 +11,7 @@ const getPosts = (url) => {
             return response.json();
         })
         .then((post) => {
-            console.log(post);
+        /*    console.log(post);*/
             appendPosts (post);
             
 
@@ -16,10 +22,12 @@ const getPosts = (url) => {
         });
 }
 
-getPosts('/api/blog');
 
 function appendPosts (arr) {
+    const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+    
     arr.forEach((post) => {
+        const date = new Date(post['date']);
         let postPreview =   `<div class="article" style="background-image: url(${post['url']})">
                                         <a href="/blog/posts/${post['id']}">${post['title']}</a>
                                         <hr/>
@@ -28,7 +36,7 @@ function appendPosts (arr) {
                                                 <i class="fas fa-eye"></i>
                                                 ${post['views']}
                                             </div>
-                                            ${post['date']}
+                                            ${date.getDate() + 1} de ${meses[date.getMonth()]} de ${date.getFullYear()}
                                         </div>
                                     </div>`;
     $('#articles-div').append(postPreview);

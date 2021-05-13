@@ -62,33 +62,28 @@ def signout():
     session.clear()
     return redirect('/')
 
-@api.route('/api/blog')
-def get_post_preview():
+@api.route('/api/blog/<page>')
+def get_post_preview(page):
     # text = request.args.get('text')
     # rgx = re.compile('.*{}.*'.format(text), re.IGNORECASE)
     rgx = re.compile('.*', re.IGNORECASE)
 
-    postList = posts.find({'title':rgx},{'title':1, 'url':1, 'views':1, 'date':1})
+    postList = posts.find({'title':rgx},{'title':1, 'url':1, 'views':1, 'date':1}).sort("date", -1)
+
+    queryRes = []
+    index = 0
+    page_number = int(page)
     
-    queryRes = []
     for x in postList:
-        queryRes.append({'id':str(x['_id']), 'title': x['title'], 'url': x['url'], 'views': x['views'], 'date': x['date'].date()})
+        if index >= (page_number - 1) * 18 and index < page_number * 18:
+            queryRes.append({'id':str(x['_id']), 'title': x['title'], 'url': x['url'], 'views': x['views'], 'date': x['date'].date()})
+        index += 1
     # print(queryRes)
+
+    #if not queryRes:
+    #    return redirect('/blog')
+
     return jsonify(queryRes)
-
-@api.route('/blog/posts/<post_id>')
-def get_post(post_id):
-    post = posts.find({'_id':ObjectId(post_id)}, {'title':1, 'content':1, 'views':1, 'date':1})
-
-    queryRes = []
-    for x in post:
-        queryRes.append({'id':str(x['_id']), 'title': x['title'], 'content': x['content'], 'views': x['views'], 'date': x['date'].date()})
-
-    # print(queryRes)
-
-    template = jinja_env.get_template('blog-post.html')
-
-    return template.render(title=queryRes[0]["title"], content=queryRes[0]["content"])
 
 @api.route('/api/posttitles')
 def get_titles():
