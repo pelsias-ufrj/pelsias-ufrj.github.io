@@ -48,6 +48,7 @@ body{
     box-shadow: 8px 8px 8px 0px rgba(50,50,50,0.45);
     background-color: rgba(0,0,0, 0.3);
     color: white;
+    transition: all 4.4s ease-out;
 }
 
 .article a {
@@ -61,17 +62,18 @@ body{
     background-color: white;
 }
 
-.page-nav {
+#page-nav {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    font-size: 20px;
     padding-top: 20px;
 }
 
-.page-nav a {
-    padding-left: 10px;
-    padding-right: 10px;
+#page-nav a {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #bottom {

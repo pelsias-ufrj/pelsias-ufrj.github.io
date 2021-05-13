@@ -6,6 +6,7 @@ from functools import wraps
 import os
 import jinja2
 import markdown
+from math import ceil
 
 routes = Blueprint('routes', __name__)
 
@@ -36,14 +37,21 @@ def home():
 @routes.route('/blog')
 def blog():
     template = jinja_env.get_template('Blog.html')
+    lastPage = ceil(posts.count() / 18)
 
-    return template.render(actual_page=1, previous_page=0, next_page=2)
+    return template.render(current_page=1, last_page=lastPage)
 
 @routes.route('/blog/<page>')
 def blog_page(page):
     template = jinja_env.get_template('Blog.html')
+    lastPage = ceil(posts.count() / 18)
 
-    return template.render(actual_page=page, previous_page=int(page)-1, next_page=int(page)+1)
+    if(int(page) <= 0):
+        page = 1
+    elif (int(page) > lastPage):
+        page = lastPage
+
+    return template.render(current_page=page, last_page=lastPage)
 
 @routes.route('/blog/posts/<post_id>')
 def get_post(post_id):

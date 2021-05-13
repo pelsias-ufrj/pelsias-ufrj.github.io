@@ -1,7 +1,41 @@
 window.onload = function () {
-    const page = document.getElementById('blog-page').getAttribute('value');
+    const page = Number(document.getElementById('page-nav').getAttribute('data-page'));
+    const lastPage = document.getElementById('page-nav').getAttribute('data-last-page');
     
     getPosts('/api/blog/' + page);
+
+    if (page == 1)
+    {
+        $('#page-nav').append(`
+            <a style="opacity:0;">
+                <i class="fas fa-chevron-left" style="color:black;"></i>
+            </a>
+            ${page}
+            <a href="/blog/${page + 1}" id="next-button">
+                <i class="fas fa-chevron-right" style="color:black;"></i>
+            </a>
+        `);
+    } else if (page == lastPage){
+        $('#page-nav').append(`
+            <a href="/blog/${page - 1}" id="previous-button">
+                <i class="fas fa-chevron-left" style="color:black;"></i>
+            </a>
+            ${page}
+            <a style="opacity:0;">
+                <i class="fas fa-chevron-right" style="color:black;"></i>
+            </a>
+        `);
+    } else {
+        $('#page-nav').append(`
+            <a href="/blog/${page - 1}" id="previous-button">
+                <i class="fas fa-chevron-left" style="color:black;"></i>
+            </a>
+            ${page}
+            <a href="/blog/${page + 1}" id="next-button">
+                <i class="fas fa-chevron-right" style="color:black;"></i>
+            </a>
+        `);
+    }
 }
 
 const getPosts = (url) => {
